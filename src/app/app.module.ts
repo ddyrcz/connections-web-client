@@ -9,6 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PostComponent } from './post/post.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { TableComponent } from './table/table.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TableComponent } from './table/table.component';
     PostComponent,
     CreatePostComponent,
     TableComponent,
-    PolymerElement('paper-card')
+    PolymerElement('paper-card'),
+    CommentComponent
   ],
   imports: [
     BrowserModule,

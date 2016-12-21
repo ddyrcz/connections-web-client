@@ -1,3 +1,25 @@
-<p>
-  post works!
-</p>
+<paper-card>
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="{{avatar}}" />
+      </div>
+      <div class="col-sm-10">
+        <div class="row">
+            <div class="col-sm-12">
+              {{publisher}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+              {{publishDate}}
+            </div>
+        </div>
+      </div>
+    </div>  
+
+    <li *ngFor='let comment of comments'>
+      <!--<comment></comment>-->
+      <div>{{comment.content}}</div>
+    </li>
+
+</paper-card>
