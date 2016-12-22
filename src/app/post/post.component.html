@@ -1,24 +1,27 @@
 <paper-card>
     <div class="row">
       <div class="col-sm-2">
-        <img src="{{publisherAvatar}}" />
+        <img class='img-responsive img-circle' src="{{post.publisherAvatar}}" />
       </div>
       <div class="col-sm-10">
         <div class="row">
             <div class="col-sm-12">
-              {{publisher}}
+              <h3>{{post.publisher}}</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
-              {{publishDate}}
+              {{post.publishDate}}
             </div>
         </div>
       </div>
     </div>  
 
-    <li *ngFor='let comment of comments'>
+    {{post.content}}
+    <!--content-->
+
+    <ul *ngFor='let comment of post.comments'>
       <comment [comment]=comment ></comment>      
-    </li>
+    </ul>
 
 </paper-card>

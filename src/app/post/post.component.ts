@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'post',
@@ -7,20 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  private comments;
-
-  private avatar : string;
-  private publisher  : string;
-  private publishDate : string;
+  @Input()
+  private post;
 
   constructor() { }
 
   ngOnInit() {
-    this.avatar = 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg';
-    this.publisher = 'Dawid Dyrcz';
-    this.publishDate = '12.12.2016';
+    this.post = {};
+    this.post.avatar = 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg';
+    this.post.publisherAvatar = 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg';
+    this.post.publisher = 'Dawid Dyrcz';
+    this.post.publishDate = '12.12.2016';
+    this.post.content = 'Hello everyone!';
 
-    this.comments = [
+    this.post.comments = [
       {content : 'Greate post!', date : '12.12.2016'},
       {content : 'Greate post!', date : '12.12.2016'}
     ]
