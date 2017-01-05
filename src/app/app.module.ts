@@ -10,6 +10,7 @@ import { PostComponent } from './post/post.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { TableComponent } from './table/table.component';
 import { CommentComponent } from './comment/comment.component';
+import { AddCommentComponent } from './add-comment/add-comment.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,10 @@ import { CommentComponent } from './comment/comment.component';
     PostComponent,
     CreatePostComponent,
     TableComponent,
-    PolymerElement('paper-card'),
-    CommentComponent
+    PolymerElement('paper-card'),    
+    PolymerElement('paper-textarea'),
+    CommentComponent,
+    AddCommentComponent
   ],
   imports: [
     BrowserModule,

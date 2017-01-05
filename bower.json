@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "paper-card": "PolymerElements/paper-card#^1.1.4"
+    "paper-card": "PolymerElements/paper-card#^1.1.4",
+    "paper-input": "PolymerElements/paper-input#^1.1.22"
   }
 }

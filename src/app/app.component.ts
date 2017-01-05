@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  avaratUrl = 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg';
 }
