@@ -20,10 +20,12 @@
 
     {{post.content}}
 
-    <add-comment [avatarUrl]='post.publisherAvatarUrl'></add-comment>
+    
 
     <ul *ngFor='let comment of comments'>
       <comment [comment]=comment></comment>
     </ul>
+
+    <add-comment [avatarUrl]='post.publisherAvatarUrl'></add-comment>
   </div>
 </paper-card>

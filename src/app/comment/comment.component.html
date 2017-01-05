@@ -1,4 +1,20 @@
-<img src="{{comment.commentatorAvatar}}" class='commentator-avatar' />
-
-<p>{{comment.date}}</p>
-<p>{{comment.content}}</p>
+    <div class="row">
+        <div class="col-sm-1">
+            <img src="{{comment.commentatorAvatar}}" class='commentator-avatar' />
+        </div>
+        <div class="col-sm-11">
+            <div class="row">
+                <div class="col-sm-2">
+                    <p>{{comment.commentatorName}} {{comment.commentatorLastname}}</p>
+                </div>
+                <div class="col-sm-10">
+                    <p>{{comment.date}}</p>            
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>{{comment.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
