@@ -2,29 +2,28 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-2">
-        <img class='img-responsive img-circle' src="{{post.publisherAvatar}}" />
+        <img class='img-responsive img-circle' src="{{post.publisherAvatarUrl}}" />
       </div>
       <div class="col-sm-10">
         <div class="row">
-            <div class="col-sm-12">
-              <h3>{{post.publisher}}</h3>
-            </div>
+          <div class="col-sm-12">
+            <h3>{{post.publisher}}</h3>
+          </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
-              {{post.publishDate}}
-            </div>
+          <div class="col-sm-12">
+            {{post.publishDate}}
+          </div>
         </div>
       </div>
-    </div>  
+    </div>
 
     {{post.content}}
-    <!--content-->
 
-    <add-commment></add-commment>
+    <add-comment [avatarUrl]='post.publisherAvatarUrl'></add-comment>
 
-    <ul *ngFor='let comment of post.comments'>
-      <comment [comment]=comment ></comment>
+    <ul *ngFor='let comment of comments'>
+      <comment [comment]=comment></comment>
     </ul>
-</div>
+  </div>
 </paper-card>
