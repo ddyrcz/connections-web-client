@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 
+import { PostService  } from './service/post.service' ;
+import { CommentService  } from './service/comment.service' ;
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { PostComponent } from './post/post.component';
@@ -29,7 +32,7 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PostService, CommentService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

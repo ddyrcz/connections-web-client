@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { PostService  } from './../service/post.service' ;
+import { CommentService  } from './../service/comment.service' ;
+
 @Component({
   selector: 'post',
   templateUrl: './post.component.html',
@@ -12,41 +15,11 @@ export class PostComponent implements OnInit {
 
   private comments;
 
-  constructor() { }
+  constructor(private postService : PostService,
+              private commentService : CommentService) { }
 
   ngOnInit() {
-    this.post = {};
-    this.post.publisherAvatarUrl = 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg';
-    this.post.publisher = 'Dawid Dyrcz';
-    this.post.publishDate = '12.12.2016';
-    this.post.content = 'Hello everyone!';
-
-    this.loadComments();
+    this.post = this.postService.getPost(1);
+    this.comments = this.commentService.getComments(); 
   }
-
-  loadComments() {
-    this.comments = [
-      {
-        'commentatorAvatar': 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg',
-        'date': '1d', 'content': 'Great!',
-        'commentatorName': 'Dawid', 'commentatorLastname': 'Dyrcz'
-      },
-      {
-        'commentatorAvatar': 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg',
-        'date': '1d', 'content': 'Great!',
-        'commentatorName': 'Jan', 'commentatorLastname': 'Kowalski'
-      },
-      {
-        'commentatorAvatar': 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg',
-        'date': '1d', 'content': 'Great!',
-        'commentatorName': 'Jan', 'commentatorLastname': 'Kowalski'
-      },
-      {
-        'commentatorAvatar': 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg',
-        'date': '1d', 'content': 'Great!',
-        'commentatorName': 'Jan', 'commentatorLastname': 'Kowalski'
-      }
-    ]
-  }
-
 }
