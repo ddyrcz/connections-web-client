@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, Input } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'add-comment',
@@ -7,20 +7,19 @@ import { Component, OnInit, Output, Input } from '@angular/core';
 })
 export class AddCommentComponent implements OnInit {
 
-  @Output()
-  private comment : string;
-
   @Input()
-  private avatarUrl : string;
+  private commentatorAvatarUrl : string;
 
   constructor() { }
 
+  @Output() 
+  private onCommentAddEvent = new EventEmitter<string>();
+
   ngOnInit() {
-    this.comment = 'sample comment';
+
   }
 
-  click(){
-    console.log(this.comment);
+  onCommentAdd(comment : string){    
+    this.onCommentAddEvent.emit(comment);
   }
-
 }

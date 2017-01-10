@@ -1,10 +1,11 @@
 <div class="container">
   <dir class="row">
     <div class="col-sm-2">
-      <img class='commentator-avatar' [src]='avatarUrl' alt="">
+      <img class='commentator-avatar' [src]='commentatorAvatarUrl' alt="">
     </div>
     <div class="col-sm-10">
-      <paper-textarea label="Say somethings nice"></paper-textarea>
+      <paper-input (keyup.enter)='onCommentAdd(commentBox.value)' 
+          #commentBox  label='Say something awesome'></paper-input>
     </div>
   </dir>
 </div>

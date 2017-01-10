@@ -23,7 +23,7 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
     CreatePostComponent,
     TableComponent,
     PolymerElement('paper-card'),    
-    PolymerElement('paper-textarea'),
+    PolymerElement('paper-input'),
     CommentComponent,
     AddCommentComponent
   ],

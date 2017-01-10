@@ -14,4 +14,10 @@ export class AppComponent {
         'commentatorName': 'Dawid', 'commentatorLastname': 'Dyrcz'
       };
 
+
+      onCommentAdd(comment : string){
+        console.log(comment);
+        
+      }
+
 }
