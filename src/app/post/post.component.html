@@ -18,14 +18,15 @@
       </div>
     </div>
 
-    {{post.content}}
-
+    <div class="content">
+      {{post.content}}
+    </div>
     
 
     <ul *ngFor='let comment of comments'>
       <comment [comment]=comment></comment>
     </ul>
 
-    <add-comment [avatarUrl]='post.publisherAvatarUrl'></add-comment>
+    <add-comment [commentatorAvatarUrl]='post.publisherAvatarUrl'></add-comment>
   </div>
 </paper-card>

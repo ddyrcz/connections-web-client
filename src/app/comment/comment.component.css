@@ -1,5 +1,14 @@
 .commentator-avatar{
     width: 40px;
     height: 40px;
+    
 }
 
+.content{
+    font-size: 16px;    
+    
+}
+
+.commentator-name{
+    font-weight: bold;
+}
