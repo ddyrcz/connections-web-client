@@ -18,15 +18,44 @@
       </div>
     </div>
 
-    <div class="content">
-      {{post.content}}
+    <div class="row content">
+      <div class="col-sm-12">
+        {{post.content}}
+      </div>
     </div>
-    
+
+    <div class="row">
+      <div class="col-sm-12">
+        <img [src]="post.image" class='img-responsive' alt="">
+      </div>
+    </div>
+
+
+    <div class="row overview">
+      <div class="col-sm-11">
+        {{commentsCount}} comment(s)
+      </div>
+      <div class="col-sm-1">
+        {{likesCount}} like(s)
+      </div>
+    </div>
+
+    <div class="row options">
+      <div class="col-sm-6">
+        <label>Like</label>
+      </div>
+      <div class="col-sm-6">
+        <label (click)='getComments()'>Comment</label>
+      </div>
+
+    </div>
+
+    <add-comment [commentatorAvatarUrl]='post.publisherAvatarUrl'></add-comment>
 
     <ul *ngFor='let comment of comments'>
       <comment [comment]=comment></comment>
     </ul>
 
-    <add-comment [commentatorAvatarUrl]='post.publisherAvatarUrl'></add-comment>
+
   </div>
 </paper-card>
