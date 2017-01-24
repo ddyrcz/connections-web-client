@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 
-import { PostService  } from './service/post.service' ;
-import { CommentService  } from './service/comment.service' ;
+import { PostService } from './service/post.service';
+import { CommentService } from './service/comment.service';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -15,6 +15,8 @@ import { TableComponent } from './table/table.component';
 import { CommentComponent } from './comment/comment.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 
+import { MomentModule } from 'angular2-moment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
     PostComponent,
     CreatePostComponent,
     TableComponent,
-    PolymerElement('paper-card'),    
+    PolymerElement('paper-card'),
     PolymerElement('paper-input'),
     CommentComponent,
     AddCommentComponent
@@ -30,7 +32,8 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MomentModule
   ],
   providers: [PostService, CommentService],
   bootstrap: [AppComponent],
