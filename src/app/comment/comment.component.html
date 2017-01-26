@@ -1,4 +1,4 @@
-    <div class="row">
+<!--<div class="row">
         <div class="col-sm-1">
             <img src="{{comment.commentatorAvatar}}" class='commentator-avatar' />
         </div>
@@ -17,4 +17,15 @@
                 </div>
             </div>
         </div>
+    </div>-->
+
+<div class="flex-container  comment-box">
+    <img src="{{comment.commentatorAvatar}}" class='commentator-avatar' />
+    <div>
+        <div class="flex-container">
+            <p class='commentator-name'>{{comment.commentatorName}} {{comment.commentatorLastname}}</p>
+            <p>{{comment.date | amTimeAgo}}</p>
+        </div>
+        <p class='content'>{{comment.content}}</p>
     </div>
+</div>

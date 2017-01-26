@@ -1,61 +1,44 @@
-<paper-card>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-2">
-        <img class='img-responsive img-circle' src="{{post.publisherAvatarUrl}}" />
-      </div>
-      <div class="col-sm-10">
-        <div class="row">
-          <div class="col-sm-12">
-            <h3>{{post.publisher}}</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            {{post.publishDate}}
-          </div>
-        </div>
-      </div>
+<paper-card class='post'>
+  <div class="flex-container box">
+    <img class='img-circle publisher-avatar' src="{{post.publisherAvatarUrl}}" />
+    <div class='publisher-information'>
+      <h3>{{post.publisher}}</h3>
+      <p> {{post.publishDate}}</p>
     </div>
-
-    <div class="row content">
-      <div class="col-sm-12">
-        {{post.content}}
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <img [src]="post.image" class='img-responsive' alt="">
-      </div>
-    </div>
-
-
-    <div class="row overview">
-      <div class="col-sm-11">
-        {{commentsCount}} comment(s)
-      </div>
-      <div class="col-sm-1">
-        {{likesCount}} like(s)
-      </div>
-    </div>
-
-    <div class="row options">
-      <div class="col-sm-6">
-        <label>Like</label>
-      </div>
-      <div class="col-sm-6">
-        <label (click)='getComments()'>Comment</label>
-      </div>
-
-    </div>
-
-    <add-comment [commentatorAvatarUrl]='post.publisherAvatarUrl'></add-comment>
-
-    <ul *ngFor='let comment of comments'>
-      <comment [comment]=comment></comment>
-    </ul>
-
-
   </div>
+
+  <p class='content'>{{post.content}}</p>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <img [src]="post.image" class='img-responsive' alt="">
+    </div>
+  </div>
+
+
+<!--<div class="row overview">
+  <div class="col-sm-11">
+    {{commentsCount}} comment(s)
+  </div>
+  <div class="col-sm-1">
+    {{likesCount}} like(s)
+  </div>
+</div>
+
+<div class="row options">
+  <div class="col-sm-6">
+    <label>Like</label>
+  </div>
+  <div class="col-sm-6">
+    <label (click)='getComments()'>Comment</label>
+  </div>
+|</div>-->
+
+<add-comment  [commentatorAvatarUrl]='post.publisherAvatarUrl'></add-comment>
+
+<ul *ngFor='let comment of comments'>
+  <comment [comment]=comment></comment>
+</ul>
+
+
 </paper-card>

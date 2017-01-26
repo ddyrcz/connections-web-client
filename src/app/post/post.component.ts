@@ -25,6 +25,7 @@ export class PostComponent implements OnInit {
     this.post = this.postService.getPost(1);
     this.commentsCount = this.commentService.getCommentsCount(this.post.id);
     this.likesCount = 0;
+    this.getComments();
   }
 
   getComments() {

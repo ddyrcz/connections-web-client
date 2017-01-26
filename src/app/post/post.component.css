@@ -10,3 +10,8 @@
     border-top: 1px solid;
     text-align: center;
 }
+
+.publisher-avatar{
+    width: 70px;
+    height: 70px;
+}

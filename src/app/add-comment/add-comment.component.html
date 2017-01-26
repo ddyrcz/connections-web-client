@@ -1,5 +1,5 @@
-<div class="container">
-  <dir class="row">
+<!--<div class="container">-->
+<!--<div class="row">
     <div class="col-sm-2">
       <img class='commentator-avatar' [src]='commentatorAvatarUrl' alt="">
     </div>
@@ -7,5 +7,9 @@
       <paper-input (keyup.enter)='onCommentAdd(commentBox.value)' 
           #commentBox  label='Say something awesome'></paper-input>
     </div>
-  </dir>
+  </div>-->
+
+<div class="flex-container box">
+  <img class='commentator-avatar' [src]='commentatorAvatarUrl' alt="" >
+  <paper-input class="comment-input" (keyup.enter)='onCommentAdd(commentBox.value)'  #commentBox label='Say something awesome'></paper-input>
 </div>
