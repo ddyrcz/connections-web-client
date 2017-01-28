@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { PostService } from './../service/post.service';
-import { CommentService } from './../service/comment.service';
+import { PostService } from './../shared/service/post.service';
+import { CommentService } from './../shared/service/comment.service';
 
 @Component({
   selector: 'post',

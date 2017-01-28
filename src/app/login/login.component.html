@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Login</h1>
+  <form #loginForm='ngForm'>    
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" class='form-control' #emailModel='ngModel' [(ngModel)]='user.email' id='email' name='email' required/>
+      <div [hidden]="emailModel.valid || emailModel.pristine" class="alert alert-danger">
+        Email is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class='form-control' id='password' #passwordModel='ngModel' [(ngModel)]='user.password' name='password' required
+      />
+      <div [hidden]="passwordModel.valid || passwordModel.pristine" class="alert alert-danger">
+        Password is required
+      </div>
+    </div>
+    <!--<button class="btn btn-default">Register</button>-->
+    <button type="submit" class="btn btn-default" [disabled]='!loginForm.form.valid' (click)='login()'>Login</button>
+  </form>
+</div>
