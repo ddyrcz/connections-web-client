@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { PostService } from './shared/service/post.service';
 import { CommentService } from './shared/service/comment.service';
-
+import { MaterialModule } from '@angular/material'
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { PostComponent } from './post/post.component';
@@ -31,7 +31,8 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MomentModule
+    MomentModule,
+    MaterialModule.forRoot()
   ],
   providers: [PostService, CommentService],
   bootstrap: [AppComponent]
