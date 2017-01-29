@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { PolymerElement } from '@vaadin/angular2-polymer';
-
 import { PostService } from './shared/service/post.service';
 import { CommentService } from './shared/service/comment.service';
 
@@ -25,8 +23,6 @@ import { LoginComponent } from './login/login.component';
     PostComponent,
     CreatePostComponent,
     TableComponent,
-    PolymerElement('paper-card'),
-    PolymerElement('paper-input'),
     CommentComponent,
     AddCommentComponent,
     LoginComponent
@@ -38,7 +34,6 @@ import { LoginComponent } from './login/login.component';
     MomentModule
   ],
   providers: [PostService, CommentService],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
