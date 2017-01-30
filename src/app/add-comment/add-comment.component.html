@@ -1,6 +1,6 @@
 <div class="flex-container box">
   <img class='commentator-avatar' [src]='commentatorAvatarUrl' alt="">
   <md-input-container class="comment-input">
-    <input md-input placeholder="Say something awesome" (keyup.enter)='onCommentAdd(commentBox.value)'>
+    <input md-input placeholder="Say something awesome" #commentBox (keyup.enter)='onCommentAdd(commentBox.value)'>
   </md-input-container>
 </div>
