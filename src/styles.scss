@@ -9,6 +9,10 @@ body{
     display: flex;    
 }
 
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
+
 .box{
     margin: 10px;
 }

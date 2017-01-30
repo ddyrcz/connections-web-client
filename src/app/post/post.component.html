@@ -1,4 +1,4 @@
-<!--<paper-card class='post'>-->
+<md-card>
   <div class="flex-container box">
     <img class='img-circle publisher-avatar' src="{{post.publisherAvatarUrl}}" />
     <div class='publisher-information'>
@@ -15,30 +15,10 @@
     </div>
   </div>
 
+  <add-comment [commentatorAvatarUrl]='post.publisherAvatarUrl'></add-comment>
 
-<!--<div class="row overview">
-  <div class="col-sm-11">
-    {{commentsCount}} comment(s)
-  </div>
-  <div class="col-sm-1">
-    {{likesCount}} like(s)
-  </div>
-</div>
+  <ul *ngFor='let comment of comments'>
+    <comment [comment]=comment></comment>
+  </ul>
 
-<div class="row options">
-  <div class="col-sm-6">
-    <label>Like</label>
-  </div>
-  <div class="col-sm-6">
-    <label (click)='getComments()'>Comment</label>
-  </div>
-|</div>-->
-
-<add-comment  [commentatorAvatarUrl]='post.publisherAvatarUrl'></add-comment>
-
-<ul *ngFor='let comment of comments'>
-  <comment [comment]=comment></comment>
-</ul>
-
-
-<!--</paper-card>-->
+</md-card>

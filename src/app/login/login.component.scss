@@ -12,6 +12,10 @@
 }
 
 .login-card{
-    width: 50%;
+    
     margin: auto;
+
+    @media screen and (min-width: 730px) {
+        width: 60%;
+    }
 }

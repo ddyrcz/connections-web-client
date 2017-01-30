@@ -19,7 +19,9 @@
           Password is required
         </div>
       </div>
-      <button type="submit" md-raised-button [disabled]='!loginForm.form.valid'>Login</button>
+      <div class='flex-container flex-row-reverse'>
+        <button type="submit" md-raised-button [disabled]='!loginForm.form.valid'>Login</button>
+      </div>
     </form>
   </md-card>
 </div>
