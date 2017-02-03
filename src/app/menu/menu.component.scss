@@ -1,0 +1,27 @@
+$mobile-only: "only screen and (max-width : 768px)";
+
+.menu-container{
+    height: 40px;
+    background-color: #FFFFFF;
+    width: 100%;
+     box-shadow: 0px 1px 3px grey;
+}
+
+.item-box{
+    margin-left: 15%;
+
+    height: 40px;
+    align-items: center;
+
+    @media #{$mobile-only}{
+        margin-left: 15px;
+    }
+}
+
+.item{
+    margin: 10px;
+}
+
+.item:hover{
+   border-bottom:  2px solid #007BAA;
+}
