@@ -5,6 +5,7 @@ $mobile-only: "only screen and (max-width : 768px)";
     background-color: #FFFFFF;
     width: 100%;
      box-shadow: 0px 1px 3px grey;
+     display: flex;
 }
 
 .item-box{
@@ -24,4 +25,10 @@ $mobile-only: "only screen and (max-width : 768px)";
 
 .item:hover{
    border-bottom:  2px solid #007BAA;
+}
+
+
+.icon{
+    width: 47px;
+    height: 38px;
 }
