@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Post } from './../model/post'
+import { User } from './../model/user'
 
-const MOCK_POSTS = [
-    {
-        'id': 1,        
-        'publisherAvatarUrl': 'https://ab-prod-media-assets.s3.amazonaws.com/1/profile_pictures/raghavender-mittapalli/raghavender-mittapalli-present.png',
-        'publisher': 'Dawid Dyrcz',
-        'publishDate': '12.12.2016',
-        'content': 'Hello everyone! This is the best social network page i\'ve ever seen! :D',
-        'image': 'http://cmsmart.net/blog/wp-content/uploads/cmsmart-social-network.jpg'
-    }
+const MOCK_POSTS: Post[] = [
+    new Post(1, 'Hello everyone! This is the best social network page i\'ve ever seen! :D',
+        'http://cmsmart.net/blog/wp-content/uploads/cmsmart-social-network.jpg', new User(1, 'Dawid', 'Dyrcz', null, null,
+            'https://ab-prod-media-assets.s3.amazonaws.com/1/profile_pictures/raghavender-mittapalli/raghavender-mittapalli-present.png'),
+        new Date()),
+    new Post(2, 'Great day :)',
+        'http://cmsmart.net/blog/wp-content/uploads/cmsmart-social-network.jpg', new User(2, 'Jan', 'Kowalski', null, null,
+            'http://www.megacynics.com/img/avatar_sample_01.jpg'),
+        new Date())
 ];
 
 @Injectable()

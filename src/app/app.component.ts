@@ -1,23 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PostService } from './shared/service/post.service'
+import { Post } from './shared/model/post'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  avaratUrl = 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg';
-  comment = 
-        {
-        'commentatorAvatar': 'http://www.niksebastian.com/wp-content/uploads/2014/05/sample-2-sm.jpg',
-        'date': '12.12.2016', 'content': 'Great! soooooooooooooooooooooooooooooooooooooooooooooooooooooo loooooooooooooooooooooooooooooong',
-        'commentatorName': 'Dawid', 'commentatorLastname': 'Dyrcz'
-      };
+export class AppComponent implements OnInit {
 
+  private posts: Post[];
 
-      onCommentAdd(comment : string){
-        console.log(comment);
-        
-      }
+  constructor(private postService: PostService) {
+  }
 
+  ngOnInit() {
+    this.posts = this.postService.getPosts();
+  }
 }

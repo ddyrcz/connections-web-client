@@ -4,9 +4,11 @@
 <!--
 <app-login> </app-login>-->
 
-<!--<div class="container">
-    <post></post>
-</div>-->
+<div class="container">
+    <div *ngFor='let post of posts' class="post">
+        <app-post></app-post>
+    </div>
+</div>
 
 
 <!--<add-comment (onCommentAddEvent)='onCommentAdd($event)' [commentatorAvatarUrl]='avaratUrl'></add-comment>-->
