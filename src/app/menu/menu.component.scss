@@ -7,7 +7,10 @@ $mobile-only: "only screen and (max-width : 768px)";
     box-shadow: 0px 1px 3px grey;     
 }
 
-.item-box{
+.menu-column{
+
+    display: flex;
+    justify-content: center;
     // margin-left: 15%;
 
     //height: 40px;
@@ -19,11 +22,17 @@ $mobile-only: "only screen and (max-width : 768px)";
 }
 
 .item{
-    margin: 10px;
+    margin: 10px;    
 }
 
 .item:hover{
    border-bottom:  2px solid #007BAA;
+}
+
+.item-text{
+    // @media #{$mobile-only}{
+    //     @extend .message;
+    // }
 }
 
 
