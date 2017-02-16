@@ -1,19 +1,21 @@
 $mobile-only: "only screen and (max-width : 768px)";
 
+$menu-height: 40px;
+
 .menu-container{
-    height: 40px;
+    height: $menu-height;
     background-color: #FFFFFF;
     width: 100%;
     box-shadow: 0px 1px 3px grey;     
 }
 
 .menu-column{
-
+    
     display: flex;
     justify-content: center;
     // margin-left: 15%;
 
-    //height: 40px;
+    height: $menu-height;
     //align-items: center;
 
     // @media #{$mobile-only}{
@@ -21,18 +23,26 @@ $mobile-only: "only screen and (max-width : 768px)";
     // }
 }
 
-.item{
-    margin: 10px;    
+.menu-nav-box{
+    margin-left: 10px; 
+    margin-right: 10px;
+    margin-top: 5px;
+
+    @media only screen and (max-width : 992px) and (min-width : 768px){
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }
 
-.item:hover{
+.menu-nav-box:hover{
    border-bottom:  2px solid #007BAA;
 }
 
-.item-text{
+.menu-nav-text{
     // @media #{$mobile-only}{
     //     @extend .message;
     // }
+    margin-bottom: 10px;
 }
 
 
