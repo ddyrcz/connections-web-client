@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -15,6 +15,7 @@ import { MomentModule } from 'angular2-moment';
 import { LoginComponent } from './login/login.component';
 import { PostDetailComponent } from './post/post-detail/post-detail.component';
 import { PostComponent } from './post/post/post.component';
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -28,11 +29,12 @@ import { PostComponent } from './post/post/post.component';
     PostComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
+    CommonModule,
     HttpModule,
     MomentModule,
-    MaterialModule.forRoot()
+    MaterialModule
   ],
   providers: [PostService, CommentService],
   bootstrap: [AppComponent]

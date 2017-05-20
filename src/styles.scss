@@ -1,26 +1,27 @@
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 /* You can add global styles to this file, and also import other style files */
-body{
-    background: #F3F7F9;    
+
+body {
+  background: #F3F7F9;
 }
 
-.flex-container{
-    display: flex;    
+.flex-container {
+  display: flex;
 }
 
-.flex-row-reverse{
-    flex-direction: row-reverse;
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
-.box{
-    margin: 10px;
+.box {
+  margin: 10px;
 }
 
-.content{
-    font-size: 32px;
+.content {
+  font-size: 32px;
 }
 
-.error-message{
-    color :#EE0000;
+.error-message {
+  color: #EE0000;
 }
