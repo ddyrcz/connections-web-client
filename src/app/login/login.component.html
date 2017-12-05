@@ -1,27 +1,27 @@
 <div class="container">
-  <md-card class='login-card'>
+  <mat-card class='login-card'>
     <h1>Login</h1>
     <form #loginForm='ngForm' (ngSubmit)='login()'>
       <div class="form-group">
-        <md-input-container class='input'>
-          <input md-input placeholder="Email" [(ngModel)]='user.email' #emailModel='ngModel' required id='email' name='email'>
-        </md-input-container>
+        <mat-input-container class='input'>
+          <input mat-input placeholder="Email" [(ngModel)]='user.email' #emailModel='ngModel' required id='email' name='email'>
+        </mat-input-container>
         <div [hidden]="emailModel.valid || emailModel.pristine" class="error-message">
           Email is required
         </div>
       </div>
       <div class="form-group">
-        <md-input-container class='input'>
-          <input md-input placeholder="Password" [(ngModel)]='user.password' type='password' #passwordModel='ngModel' required id='password'
+        <mat-input-container class='input'>
+          <input mat-input placeholder="Password" [(ngModel)]='user.password' type='password' #passwordModel='ngModel' required id='password'
             name='password'>
-        </md-input-container>
+        </mat-input-container>
         <div [hidden]="passwordModel.valid || passwordModel.pristine" class="error-message">
           Password is required
         </div>
       </div>
       <div class='flex-container flex-row-reverse'>
-        <button type="submit" md-raised-button [disabled]='!loginForm.form.valid'>Login</button>
+        <button type="submit" mat-raised-button [disabled]='!loginForm.form.valid'>Login</button>
       </div>
     </form>
-  </md-card>
+  </mat-card>
 </div>

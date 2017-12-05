@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { PostService } from './shared/service/post.service';
 import { CommentService } from './shared/service/comment.service';
-import { MaterialModule } from '@angular/material'
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { CreatePostComponent } from './create-post/create-post.component';
@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { PostDetailComponent } from './post/post-detail/post-detail.component';
 import { PostComponent } from './post/post/post.component';
 import { CommonModule } from "@angular/common";
+import { MaterialModule } from 'app/shared/material/material.module';
 
 @NgModule({
   declarations: [
