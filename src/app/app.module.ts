@@ -16,7 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { PostDetailComponent } from './post/post-detail/post-detail.component';
 import { PostComponent } from './post/post/post.component';
 import { CommonModule } from "@angular/common";
-import { MaterialModule } from 'app/shared/material/material.module';
+import { MaterialModule } from "app/shared/material/material.module";
 
 @NgModule({
   declarations: [
