@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
-import { MatCardModule, MatButtonModule, MatMenuModule, MatIconModule, MatInputModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   exports: [

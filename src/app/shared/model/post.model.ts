@@ -1,4 +1,4 @@
-import { User } from './user';
+import { User } from 'app/shared/model/user.model';
 
 export class Post {
     constructor(

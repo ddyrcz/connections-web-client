@@ -1,27 +1,5 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
-/* You can add global styles to this file, and also import other style files */
-
 body {
+  margin: 0px;
   background: #F3F7F9;
-}
-
-.flex-container {
-  display: flex;
-}
-
-.flex-row-reverse {
-  flex-direction: row-reverse;
-}
-
-.box {
-  margin: 10px;
-}
-
-.content {
-  font-size: 32px;
-}
-
-.error-message {
-  color: #EE0000;
 }

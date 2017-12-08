@@ -1,0 +1,17 @@
+{
+  "posts": [{
+    "id": 1,
+    "content": "Hello world",
+    "imageUrl": "https://media.treehugger.com/assets/images/2017/05/royal-empress.jpg.0x545_q70_crop-scale.jpg",
+    "user": {
+      "id": 1,
+      "name": "Jan",
+      "lastName": "Kowalski"
+    }
+  }],
+  "comments": [{
+    "id": 1,
+    "postId": 1,
+    "content": "Cool!"
+  }]
+}

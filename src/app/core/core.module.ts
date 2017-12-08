@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 
 import { CommentService } from './http/comment.service';
 import { PostService } from './http/post.service';
+import { ServiceAddressProvider } from 'app/core/http/service-address-provider.service';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { PostService } from './http/post.service';
   ],
   providers: [
     CommentService,
-    PostService
+    PostService,
+    ServiceAddressProvider
   ],
   exports: [
     HttpModule

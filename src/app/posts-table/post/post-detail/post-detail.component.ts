@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { PostService } from './../../shared/service/post.service';
-import { CommentService } from './../../shared/service/comment.service';
+import { PostService } from 'app/core/http/post.service';
+import { CommentService } from 'app/core/http/comment.service';
 
 @Component({
   selector: 'app-post-detail',
