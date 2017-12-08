@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Post } from './../model/post'
-import { User } from './../model/user'
+import { Post } from './../model/post';
+import { User } from './../model/user';
 
 const MOCK_POSTS: Post[] = [
     new Post(1, 'Hello everyone! This is the best social network page i\'ve ever seen! :D',
@@ -21,6 +21,6 @@ export class PostService {
     }
 
     getPost(id: number) {
-        return MOCK_POSTS.find((post) => post.id == id);
+        return MOCK_POSTS.find((post) => post.id === id);
     }
 }

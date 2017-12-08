@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from './shared/service/post.service'
-import { Post } from './shared/model/post'
+import { PostService } from './shared/service/post.service';
+import { Post } from './shared/model/post';
 
 @Component({
   selector: 'app-root',

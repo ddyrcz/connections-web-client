@@ -23,7 +23,7 @@ const MOCK_COMMENTS = [
     'date': new Date(2017, 1, 23, 13, 44, 0), 'content': 'Great!',
     'commentatorName': 'Jan', 'commentatorLastname': 'Kowalski'
   }
-]
+];
 
 @Injectable()
 export class CommentService {
