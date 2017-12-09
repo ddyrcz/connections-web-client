@@ -6,7 +6,7 @@ import { Post } from 'app/shared/model/post.model';
 @Component({
   selector: 'app-posts-table',
   templateUrl: './posts-table.component.html',
-  styleUrls: ['./posts-table.component.sass'],
+  styleUrls: ['./posts-table.component.scss'],
   providers: [
     PostsTableService,
     PostsNumberToDownloadCalculator

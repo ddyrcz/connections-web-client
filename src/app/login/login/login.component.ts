@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.user = new User(1, 'Dawid', 'Dyrcz', '', 'dd', null);
+
   }
 
   login() {

@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "PowerShell -Command \"start-process json-server -ArgumentList '.\\json-server\\data.json --watch'; npm start\""
+    "dev": "PowerShell -Command \"start-process json-server -ArgumentList '.\\json-server\\data.json --routes .\\json-server\\routes.json  --watch'; npm start\""
   },
   "private": true,
   "dependencies": {

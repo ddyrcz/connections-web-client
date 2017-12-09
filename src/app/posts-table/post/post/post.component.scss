@@ -1,0 +1,19 @@
+.post-container {
+  max-width: 500px;
+  .publisher-container {
+    margin: 5px;
+    .avatar {
+      width: 30px;
+    }
+  }
+  .content-container {
+    margin-top: 15px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+  }
+  .image-container {
+    img {
+      max-width: 100%;
+    }
+  }
+}

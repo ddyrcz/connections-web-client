@@ -6,7 +6,6 @@ import { PostsNumberToDownloadCalculator } from 'app/posts-table/posts-table/ser
 
 import { List } from 'linqts';
 
-import 'rxjs/add/operator/do';
 import { DateService } from 'app/core/date.service';
 
 @Injectable()
@@ -18,18 +17,6 @@ export class PostsTableService {
     private postsNumberToDownloadCalculator: PostsNumberToDownloadCalculator,
     private dateService: DateService) { }
 
-
-  private getOldersPostCreationDateOrNow(): Date {
-    return this.oldestPost ?
-      this.oldestPost.creationDate :
-      new Date();
-  }
-
-  private getOldestPostCreationDateAsString(): string {
-    const oldersPostCreationDateOrNow = this.getOldersPostCreationDateOrNow();
-    return this.dateService.toISO8601(oldersPostCreationDateOrNow);
-  }
-
   getPosts(): Promise<Post[]> {
     const oldestPostCreationDateAsString: string = this.getOldestPostCreationDateAsString();
     const numberOfPostToDownload = this.postsNumberToDownloadCalculator.calculatePostsNumberToDownload();
@@ -37,10 +24,27 @@ export class PostsTableService {
     return this.http.get<Post[]>
       (`${this.serviceAddressProvider.serviceAddress}/api/posts?createdBefore=${oldestPostCreationDateAsString}&take=${numberOfPostToDownload}`)
       .do(posts => {
-        const postsList = new List<Post>(posts);
-        this.oldestPost = postsList
-          .LastOrDefault();
+        this.oldestPost = this.getOldestPost(posts);
       })
       .toPromise();
   }
+
+  private getOldestPost(posts: Post[]): Post {
+    const postsList = new List<Post>(posts);
+    return postsList
+      .OrderByDescending(x => x.createdAt)
+      .FirstOrDefault();
+  }
+
+  private getOldersPostCreationDateOrCurrent(): Date {
+    return this.oldestPost ?
+      this.oldestPost.createdAt :
+      new Date();
+  }
+
+  private getOldestPostCreationDateAsString(): string {
+    const oldersPostCreationDateOrNow = this.getOldersPostCreationDateOrCurrent();
+    return this.dateService.toISO8601(oldersPostCreationDateOrNow);
+  }
+
 }

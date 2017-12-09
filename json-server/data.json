@@ -6,8 +6,21 @@
     "user": {
       "id": 1,
       "name": "Jan",
-      "lastName": "Kowalski"
-    }
+      "lastName": "Kowalski",
+      "avatarUrl": "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+    },
+    "createdAt": "2017-12-09T14:58:41+01:00"
+  }, {
+    "id": 1,
+    "content": "Hello world",
+    "imageUrl": "https://media.treehugger.com/assets/images/2017/05/royal-empress.jpg.0x545_q70_crop-scale.jpg",
+    "user": {
+      "id": 1,
+      "name": "Jan",
+      "lastName": "Kowalski",
+      "avatarUrl": "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+    },
+    "createdAt": "2017-12-09T14:58:41+01:00"
   }],
   "comments": [{
     "id": 1,
