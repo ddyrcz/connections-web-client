@@ -1,12 +1,16 @@
 <mat-card class="post-container">
-  <div class="publisher-container" fxLayoutAlign='start center'>
+  <div class="publisher-container" fxLayoutAlign='start center' fxLayoutGap='15px'>
     <img class='avatar' [src]="post.user.avatarUrl">
-    <div>{{post.user.name}} {{post.user.lastName}}</div>
+    <div class='post-information'>
+      <div class="publisher-information">{{post.user.name}} {{post.user.lastName}}
+      </div>
+      <div class='publish-date'>{{post.createdAt | amTimeAgo}}</div>
+    </div>
   </div>
   <div class="content-container">
     {{post.content}}
   </div>
-  <div class="image-container">
+  <div class="image-container" fxLayoutAlign='center start'>
     <img [src]="post.imageUrl">
   </div>
 </mat-card>
