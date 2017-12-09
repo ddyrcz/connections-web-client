@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CommentService } from './http/comment.service';
-import { PostService } from './http/post.service';
 import { ServiceAddressProvider } from 'app/core/http/service-address-provider.service';
+import { DateService } from 'app/core/date.service';
 
 @NgModule({
   imports: [
@@ -12,11 +12,11 @@ import { ServiceAddressProvider } from 'app/core/http/service-address-provider.s
   ],
   providers: [
     CommentService,
-    PostService,
-    ServiceAddressProvider
+    ServiceAddressProvider,
+    DateService
   ],
   exports: [
-    HttpModule
+    HttpClientModule
   ]
 })
 export class CoreModule { }

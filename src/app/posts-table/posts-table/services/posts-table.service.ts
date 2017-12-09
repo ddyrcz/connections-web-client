@@ -7,6 +7,7 @@ import { PostsNumberToDownloadCalculator } from 'app/posts-table/posts-table/ser
 import { List } from 'linqts';
 
 import 'rxjs/add/operator/do';
+import { DateService } from 'app/core/date.service';
 
 @Injectable()
 export class PostsTableService {
@@ -14,15 +15,27 @@ export class PostsTableService {
 
   constructor(private http: HttpClient,
     private serviceAddressProvider: ServiceAddressProvider,
-    private postsNumberToDownloadCalculator: PostsNumberToDownloadCalculator) { }
+    private postsNumberToDownloadCalculator: PostsNumberToDownloadCalculator,
+    private dateService: DateService) { }
 
-  getPosts(): Promise<Post[]> {
-    const postsCreatedBefore = this.oldestPost ?
+
+  private getOldersPostCreationDateOrNow(): Date {
+    return this.oldestPost ?
       this.oldestPost.creationDate :
       new Date();
+  }
+
+  private getOldestPostCreationDateAsString(): string {
+    const oldersPostCreationDateOrNow = this.getOldersPostCreationDateOrNow();
+    return this.dateService.toISO8601(oldersPostCreationDateOrNow);
+  }
+
+  getPosts(): Promise<Post[]> {
+    const oldestPostCreationDateAsString: string = this.getOldestPostCreationDateAsString();
+    const numberOfPostToDownload = this.postsNumberToDownloadCalculator.calculatePostsNumberToDownload();
 
     return this.http.get<Post[]>
-      (`${this.serviceAddressProvider.serviceAddress}/api/posts?createdBefore=${postsCreatedBefore}&take=${this.postsNumberToDownloadCalculator.calculatePostsNumberToDownload()}`)
+      (`${this.serviceAddressProvider.serviceAddress}/api/posts?createdBefore=${oldestPostCreationDateAsString}&take=${numberOfPostToDownload}`)
       .do(posts => {
         const postsList = new List<Post>(posts);
         this.oldestPost = postsList

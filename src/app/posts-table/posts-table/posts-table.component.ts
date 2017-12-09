@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostsTableService } from 'app/posts-table/posts-table/services/posts-table.service';
 import { PostsNumberToDownloadCalculator } from 'app/posts-table/posts-table/services/posts-number-to-download-calculator.service';
+import { Post } from 'app/shared/model/post.model';
 
 @Component({
   selector: 'app-posts-table',
@@ -13,9 +14,16 @@ import { PostsNumberToDownloadCalculator } from 'app/posts-table/posts-table/ser
 })
 export class PostsTableComponent implements OnInit {
 
-  constructor() { }
+  posts: Post[] = [];
 
-  ngOnInit() {
+  constructor(private tableService: PostsTableService) { }
+
+  async ngOnInit() {
+    await this.getPosts();
   }
 
+  private async getPosts() {
+    const newPosts = await this.tableService.getPosts();
+    this.posts.push(...newPosts);
+  }
 }
