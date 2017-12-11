@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ElementRef, ViewChild } from '@angular/core';
 import { ApplicationDataService } from 'app/core/services/application-data.service';
 
 @Component({
@@ -14,11 +14,15 @@ export class AddCommentComponent implements OnInit {
 
   comment: string | undefined;
 
+  @ViewChild('commentInput') commentInput: ElementRef;
+
   ngOnInit() {
+    console.log(this.commentInput);
   }
 
   addComment(comment: string) {
     this.onCommentAdded.emit(comment);
     this.comment = undefined;
+    this.commentInput.nativeElement.blur();
   }
 }
