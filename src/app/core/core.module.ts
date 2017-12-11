@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommentService } from './http/comment.service';
 import { ServiceAddressProvider } from 'app/core/http/service-address-provider.service';
 import { DateService } from 'app/core/date.service';
+import { ApplicationDataService } from 'app/core/services/application-data.service';
 
 @NgModule({
   imports: [
@@ -13,7 +14,9 @@ import { DateService } from 'app/core/date.service';
   providers: [
     CommentService,
     ServiceAddressProvider,
-    DateService
+    DateService,
+    ApplicationDataService
+
   ],
   exports: [
     HttpClientModule

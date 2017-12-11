@@ -4,12 +4,14 @@ import { MomentModule } from 'angular2-moment/moment.module';
 import { CommentsListComponent } from './comments-list/comments-list.component';
 import { CommentComponent } from './comment/comment.component';
 import { SharedModule } from 'app/shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     MomentModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   declarations: [CommentsListComponent, CommentComponent],
   exports: [CommentsListComponent]
