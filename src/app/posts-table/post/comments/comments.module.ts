@@ -5,6 +5,7 @@ import { CommentsListComponent } from './comments-list/comments-list.component';
 import { CommentComponent } from './comment/comment.component';
 import { SharedModule } from 'app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { AddCommentComponent } from './add-comment/add-comment.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     FormsModule
   ],
-  declarations: [CommentsListComponent, CommentComponent],
+  declarations: [CommentsListComponent, CommentComponent, AddCommentComponent],
   exports: [CommentsListComponent]
 })
 export class CommentsModule { }

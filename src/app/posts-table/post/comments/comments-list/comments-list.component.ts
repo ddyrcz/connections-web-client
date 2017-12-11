@@ -16,8 +16,6 @@ export class CommentsListComponent implements OnInit {
 
   comments: Comment[];
 
-  comment: string | undefined;
-
   constructor(private commentService: CommentService,
     public applicationData: ApplicationDataService) { }
 
@@ -26,17 +24,15 @@ export class CommentsListComponent implements OnInit {
       .then(comments => this.comments = comments);
   }
 
-  addComment(comment: string) {
-    var comment: Comment = {
-      content: comment,
+  onCommentAdded(enteredComment: string) {
+    const newComment: Comment = {
+      content: enteredComment,
       createdAt: new Date(),
       postId: this.post.id,
-      user: this.applicationData.loggedInUser
-    }
+      user: this.applicationData.loggedInUser,
+      id: 0
+    };
 
-    this.comment = undefined;
-
-    this.comments.splice(0, 0, comment);
+    this.comments.splice(0, 0, newComment);
   }
-
 }
