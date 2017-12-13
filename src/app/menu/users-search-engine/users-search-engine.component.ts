@@ -8,18 +8,19 @@ import { MatAutocompleteTrigger } from '@angular/material/autocomplete';
 @Component({
   selector: 'app-users-search-engine',
   templateUrl: './users-search-engine.component.html',
-  styleUrls: ['./users-search-engine.component.scss']
+  styleUrls: ['./users-search-engine.component.scss'],
+  providers: [UserService]
 })
 export class UsersSearchEngineComponent implements OnInit {
 
   constructor(private readonly userService: UserService) { }
 
-  query: string
+  query: string;
 
   getUrlQuery() {
     return {
       query: this.query
-    }
+    };
   }
 
   @ViewChild('queryInput', { read: MatAutocompleteTrigger }) queryInputTrigger: MatAutocompleteTrigger;
