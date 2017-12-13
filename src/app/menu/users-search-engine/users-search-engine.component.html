@@ -2,7 +2,7 @@
   <mat-form-field class='form' floatLabel='never'>
     <input type="text" [(ngModel)]='query' #queryInput matInput placeholder="Szukaj znajomych" [formControl]="myControl" [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let user of users" [value]="user">
+      <mat-option *ngFor="let user of users" [value]="user" routerLink='/users/1'>
         <div fxLayoutAlign='start center' fxLayoutGap='10px'>
           <img class='user-avatar' [src]="user.avatarUrl">
           <div>{{user.name}} {{user.lastname}}</div>

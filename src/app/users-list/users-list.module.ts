@@ -5,11 +5,13 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { SharedModule } from 'app/shared/shared.module';
 import { UsersListRoutingModule } from 'app/users-list/users-list-routing.module';
 import { UserListItemComponent } from './user-list-item/user-list-item.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     SharedModule,
-    UsersListRoutingModule
+    UsersListRoutingModule,
+    RouterModule.forChild([])
   ],
   declarations: [UsersListComponent, UserListItemComponent],
   exports: [
