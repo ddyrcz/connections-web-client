@@ -1,0 +1,14 @@
+.card {
+  width: 500px;
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .informations {
+    font-size: 28px;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #fcfcfc;
+  }
+}
