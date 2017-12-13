@@ -6,6 +6,7 @@ import { CommentService } from './http/comment.service';
 import { ServiceAddressProvider } from 'app/core/http/service-address-provider.service';
 import { DateService } from 'app/core/date.service';
 import { ApplicationDataService } from 'app/core/services/application-data.service';
+import { UserService } from './http/user.service';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ApplicationDataService } from 'app/core/services/application-data.servi
     CommentService,
     ServiceAddressProvider,
     DateService,
-    ApplicationDataService
+    ApplicationDataService,
+    UserService
 
   ],
   exports: [

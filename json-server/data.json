@@ -44,5 +44,30 @@
       "lastname": "Kowalska",
       "avatarUrl": "https://i.pinimg.com/736x/a8/0a/cf/a80acf2af723599088e4323c056ae669--icon-creator-create-avatar.jpg"
     }
-  }]
+  }],
+  "users": [{
+      "name": "Dawid",
+      "lastname": "Dyrcz",
+      "avatarUrl": "http://www.iconninja.com/files/587/741/209/face-avatar-icon.png",
+      "query": "12"
+    },
+    {
+      "name": "Michał",
+      "lastname": "Kowalski",
+      "query": "12",
+      "avatarUrl": "https://i.pinimg.com/736x/a8/0a/cf/a80acf2af723599088e4323c056ae669--icon-creator-create-avatar.jpg"
+    },
+    {
+      "name": "Andrzej",
+      "lastname": "Kozioł",
+      "query": "13",
+      "avatarUrl": "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+    },
+    {
+      "name": "Jakub",
+      "lastname": "Koczyba",
+      "query": "13",
+      "avatarUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png"
+    }
+  ]
 }

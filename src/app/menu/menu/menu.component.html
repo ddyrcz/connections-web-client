@@ -1,5 +1,11 @@
 <div class="menu-container" fxLayoutAlign='space-around center'>
-  <div></div>
-  <img src="assets/company-logo.png" class='company-logo' routerLink=''>
-  <img matTooltip="Wyszukaj znajomych!" src="assets/person-icon.png" class='person-icon' routerLink='users'>
+  <div fxFlex='30' fxLayoutAlign='center center'>
+    <img src="assets/company-logo.png" class='company-logo' routerLink=''>
+  </div>
+  <div fxFlex='40' fxLayoutAlign='center center'>
+    <app-users-search-engine></app-users-search-engine>
+  </div>
+  <div fxFlex='30' fxLayoutAlign='center center'>
+    <img matTooltip="Wyszukaj znajomych!" src="assets/person-icon.png" class='person-icon' routerLink='users'>
+  </div>
 </div>
