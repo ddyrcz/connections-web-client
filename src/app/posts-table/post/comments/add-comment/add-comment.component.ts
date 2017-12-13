@@ -17,7 +17,6 @@ export class AddCommentComponent implements OnInit {
   @ViewChild('commentInput') commentInput: ElementRef;
 
   ngOnInit() {
-    console.log(this.commentInput);
   }
 
   addComment(comment: string) {

@@ -2,6 +2,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { MomentModule } from 'angular2-moment';
 
@@ -20,7 +21,8 @@ import { CoreModule } from 'app/core/core.module';
     MomentModule,
     MaterialModule,
     HomeModule,
-    CoreModule
+    CoreModule,
+    RouterModule.forRoot([])
   ],
   bootstrap: [AppComponent]
 })

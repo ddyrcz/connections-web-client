@@ -5,5 +5,14 @@
   box-shadow: 1px 1px 1px gray;
   .company-logo {
     height: 60px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .person-icon {
+    height: 40px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
