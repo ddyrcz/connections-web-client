@@ -5,7 +5,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   exports: [
@@ -14,8 +13,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatButtonModule,
     MatMenuModule,
     MatInputModule,
-    MatTooltipModule,
-    MatAutocompleteModule
+    MatTooltipModule
   ]
 })
 export class MaterialModule { }

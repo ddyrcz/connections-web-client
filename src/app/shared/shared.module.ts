@@ -10,7 +10,8 @@ import { MaterialModule } from 'app/shared/material/material.module';
   ],
   exports: [
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    CommonModule
   ]
 })
 export class SharedModule { }
