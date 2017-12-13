@@ -19,7 +19,7 @@ export class UsersSearchEngineComponent implements OnInit {
 
   ngOnInit() {
     this.myControl.valueChanges
-      .debounceTime(500)
+      .debounceTime(200)
       .subscribe(async (query: string) => {
         this.users = await this.userService.getUsers(query);
       });

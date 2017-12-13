@@ -1,3 +1,11 @@
+.searcher-container {
+  mat-form-field {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 .user-avatar {
+  width: 40px;
   height: 40px;
 }

@@ -1,11 +1,13 @@
-<mat-form-field>
-  <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
-  <mat-autocomplete #auto="matAutocomplete">
-    <mat-option *ngFor="let user of users" [value]="user">
-      <div fxLayout fxLayoutGap='10px'>
-        <img class='user-avatar' [src]="user.avatarUrl">
-        <div>{{user.name}} {{user.lastname}}</div>
-      </div>
-    </mat-option>
-  </mat-autocomplete>
-</mat-form-field>
+<div class='searcher-container' fxLayoutAlign='center center'>
+  <mat-form-field class='form' floatLabel='never'>
+    <input type="text" matInput placeholder="Szukaj znajomych" [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let user of users" [value]="user">
+        <div fxLayoutAlign='start center' fxLayoutGap='10px'>
+          <img class='user-avatar' [src]="user.avatarUrl">
+          <div>{{user.name}} {{user.lastname}}</div>
+        </div>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
