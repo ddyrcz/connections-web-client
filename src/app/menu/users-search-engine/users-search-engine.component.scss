@@ -9,3 +9,11 @@
   width: 40px;
   height: 40px;
 }
+
+.show-all {
+  height: 40px;
+  &:hover {
+    background: #eee;
+    cursor: pointer;
+  }
+}
