@@ -28,7 +28,6 @@ export class UsersListComponent implements OnInit {
   }
 
   private async loadUsers() {
-    this.users = [];
     this.users = await this.userService.getUsers(this.query);
   }
 
