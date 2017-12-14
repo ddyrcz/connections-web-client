@@ -18,7 +18,6 @@ import { UserService } from './http/user.service';
     DateService,
     ApplicationDataService,
     UserService
-
   ],
   exports: [
     HttpClientModule

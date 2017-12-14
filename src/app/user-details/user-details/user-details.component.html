@@ -1,3 +1,7 @@
-<p>
-  user-details works!
-</p>
+<div class='details-container' *ngIf='user' fxLayout fxLayoutGap='20px'>
+  <img class='avatar' [src]="user.avatarUrl">
+  <div>
+    <div class='name-lastname'>{{user.name}} {{user.lastname}}</div>
+    <button class='btn-follow' mat-raised-button>Obserwuj</button>
+  </div>
+</div>

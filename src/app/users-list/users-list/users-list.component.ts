@@ -15,20 +15,18 @@ export class UsersListComponent implements OnInit {
 
   users: User[];
 
-  constructor(route: ActivatedRoute,
-    private readonly userService: UserService) {
-    route.queryParams.subscribe(queryParams => {
+  constructor(
+    private route: ActivatedRoute,
+    private userService: UserService) { }
+
+  async ngOnInit() {
+    this.route.queryParams.subscribe(queryParams => {
       this.query = queryParams['query'];
       this.loadUsers();
     });
   }
 
-  async ngOnInit() {
-    await this.loadUsers();
-  }
-
   private async loadUsers() {
     this.users = await this.userService.getUsers(this.query);
   }
-
 }

@@ -12,4 +12,9 @@ export class UserService {
     return this.http.get<User[]>(`${this.serviceAddressProvider.serviceAddress}/api/users?query=${query}&createdAt=&take=10`)
       .toPromise();
   }
+
+  getUserData(id: string): Promise<User> {
+    return this.http.get<User>(`${this.serviceAddressProvider.serviceAddress}/api/users/${id}`)
+      .toPromise();
+  }
 }
