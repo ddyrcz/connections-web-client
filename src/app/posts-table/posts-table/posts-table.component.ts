@@ -26,4 +26,8 @@ export class PostsTableComponent implements OnInit {
     const newPosts = await this.tableService.getPosts();
     this.posts.push(...newPosts);
   }
+
+  onTableScroll() {
+    this.getPosts();
+  }
 }

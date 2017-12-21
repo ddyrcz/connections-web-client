@@ -1,1 +1,7 @@
-
+.load-more-text {
+  font-size: 12px;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

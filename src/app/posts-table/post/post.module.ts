@@ -10,7 +10,7 @@ import { CommentsModule } from 'app/posts-table/post/comments/comments.module';
     CommonModule,
     SharedModule,
     MomentModule,
-    CommentsModule
+    CommentsModule,
   ],
   declarations: [PostComponent],
   exports: [

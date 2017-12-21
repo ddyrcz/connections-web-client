@@ -14,14 +14,25 @@ export class CommentsListComponent implements OnInit {
   @Input()
   post: Post;
 
-  comments: Comment[];
+  comments: Comment[] = [];
+
+  isShowMoreVisible = true;
 
   constructor(private commentService: CommentService,
     public applicationData: ApplicationDataService) { }
 
   ngOnInit() {
+    this.loadComments();
+  }
+
+  loadComments() {
     this.commentService.getPostComments(this.post.id)
-      .then(comments => this.comments = comments);
+      .then(comments => {
+        this.comments.push(...comments);
+        if (comments.length === 0) {
+          this.isShowMoreVisible = false;
+        }
+      });
   }
 
   onCommentAdded(enteredComment: string) {

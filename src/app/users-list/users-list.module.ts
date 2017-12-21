@@ -7,11 +7,14 @@ import { UsersListRoutingModule } from 'app/users-list/users-list-routing.module
 import { UserListItemComponent } from './user-list-item/user-list-item.component';
 import { RouterModule } from '@angular/router';
 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 @NgModule({
   imports: [
     SharedModule,
     UsersListRoutingModule,
-    RouterModule.forChild([])
+    RouterModule.forChild([]),
+    InfiniteScrollModule
   ],
   declarations: [UsersListComponent, UserListItemComponent],
   exports: [

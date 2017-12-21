@@ -2,4 +2,5 @@
   <app-add-comment (onCommentAdded)='onCommentAdded($event)'></app-add-comment>
   <app-comment *ngFor='let comment of comments' [comment]='comment'>
   </app-comment>
+  <div class='load-more-text' (click)='loadComments()' [fxShow]='isShowMoreVisible'>Więcej komentarzy...</div>
 </div>

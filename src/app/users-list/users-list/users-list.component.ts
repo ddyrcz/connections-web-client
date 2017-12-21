@@ -29,4 +29,13 @@ export class UsersListComponent implements OnInit {
   private async loadUsers() {
     this.users = await this.userService.getUsers(this.query);
   }
+
+  private async loadMoreUsers() {
+    const newUsers = await await this.userService.getUsers(this.query);
+    this.users.push(...newUsers);
+  }
+
+  onUsersScroll() {
+    this.loadMoreUsers();
+  }
 }

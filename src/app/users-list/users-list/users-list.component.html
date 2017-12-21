@@ -1,4 +1,5 @@
-<div class='users-list-container' fxLayout='column' fxLayoutAlign='center center' fxLayoutGap='10px'>
+<div class='users-list-container' fxLayout='column' fxLayoutAlign='center center' fxLayoutGap='10px' infiniteScroll [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="500" (scrolled)="onUsersScroll()">
   <app-user-list-item *ngFor='let user of users' [user]='user' [routerLink]="['/users', user.id]">
   </app-user-list-item>
 </div>
