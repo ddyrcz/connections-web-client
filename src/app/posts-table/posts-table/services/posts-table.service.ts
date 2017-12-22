@@ -22,7 +22,7 @@ export class PostsTableService {
     const numberOfPostToDownload = this.postsNumberToDownloadCalculator.calculatePostsNumberToDownload();
 
     return this.http.get<Post[]>
-      (`${this.serviceAddressProvider.serviceAddress}/api/posts?createdBefore=${oldestPostCreationDateAsString}&take=${numberOfPostToDownload}`)
+      (`${this.serviceAddressProvider.serviceAddress}/api/account/posts?createdBefore=${oldestPostCreationDateAsString}&take=${numberOfPostToDownload}`)
       .do(posts => {
         this.oldestPost = this.getOldestPost(posts);
       })

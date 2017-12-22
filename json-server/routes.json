@@ -1,5 +1,6 @@
 {
   "/api/*": "/$1",
   "/posts/:id/comments": "/comments",
-  "/users/:id/posts": "/posts"
+  "/users/:id/posts": "/posts",
+  "/account/posts*": "/posts"
 }

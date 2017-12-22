@@ -1,10 +1,10 @@
 {
   "posts": [{
-      "id": 1,
+      "id": "1",
       "content": "Piękny widok z kuchni :)",
       "imageUrl": "https://media.treehugger.com/assets/images/2017/05/royal-empress.jpg.0x545_q70_crop-scale.jpg",
       "user": {
-        "id": 1,
+        "id": "1",
         "name": "Jan",
         "lastname": "Kowalski",
         "avatarUrl": "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
@@ -12,11 +12,11 @@
       "createdAt": "2017-12-09T14:58:41+01:00"
     },
     {
-      "id": 1,
+      "id": "2",
       "content": "Pierwszy dzień na crossach!",
       "imageUrl": "https://i.ytimg.com/vi/Dh6KL_YgJ5Y/hqdefault.jpg",
       "user": {
-        "id": 1,
+        "id": "2",
         "name": "Michał",
         "lastname": "Musik",
         "avatarUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png"
@@ -24,28 +24,28 @@
       "createdAt": "2017-12-09T10:22:41+01:00"
     },
     {
-      "id": 1,
-      "content": "Piękny widok z kuchni :)",
-      "imageUrl": "https://media.treehugger.com/assets/images/2017/05/royal-empress.jpg.0x545_q70_crop-scale.jpg",
+      "id": "3",
+      "content": "Jedziemy!",
+      "imageUrl": "http://www.telegraph.co.uk/cars/images/Spark/Aviva/open-top-car-driving-xlarge.jpg",
       "user": {
-        "id": 1,
-        "name": "Jan",
-        "lastname": "Kowalski",
-        "avatarUrl": "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+        "id": "3",
+        "name": "Andrzej",
+        "lastname": "Duda",
+        "avatarUrl": "https://img00.deviantart.net/e4a2/i/2016/096/f/7/avatar_icon_by_astrolink247-d9xxs6r.jpg"
       },
-      "createdAt": "2017-12-09T14:58:41+01:00"
+      "createdAt": "2017-12-08T22:43:05+01:00"
     },
     {
-      "id": 1,
-      "content": "Pierwszy dzień na crossach!",
-      "imageUrl": "https://i.ytimg.com/vi/Dh6KL_YgJ5Y/hqdefault.jpg",
+      "id": "4",
+      "content": "Świąteczna atmosfera :)",
+      "imageUrl": "https://img1.southernliving.timeinc.net/sites/default/files/styles/4_3_horizontal_-_1200x900/public/image/2017/07/main/facebook2.jpg?itok=7FwC4xM4",
       "user": {
         "id": 1,
-        "name": "Michał",
-        "lastname": "Musik",
-        "avatarUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png"
+        "name": "Robert",
+        "lastname": "Tkacz",
+        "avatarUrl": "https://d30y9cdsu7xlg0.cloudfront.net/png/103808-200.png"
       },
-      "createdAt": "2017-12-09T10:22:41+01:00"
+      "createdAt": "2017-12-08T21:33:20+01:00"
     }
   ],
   "comments": [{
@@ -72,7 +72,7 @@
     }
   }],
   "users": [{
-      "id": 1,
+      "id": "1",
       "name": "Dawid",
       "lastname": "Dyrcz",
       "avatarUrl": "http://www.iconninja.com/files/587/741/209/face-avatar-icon.png",
@@ -80,49 +80,21 @@
     },
     {
 
-      "id": 2,
+      "id": "2",
       "name": "Michał",
       "lastname": "Kowalski",
       "query": "12",
       "avatarUrl": "https://i.pinimg.com/736x/a8/0a/cf/a80acf2af723599088e4323c056ae669--icon-creator-create-avatar.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Andrzej",
       "lastname": "Kozioł",
       "query": "12",
       "avatarUrl": "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
     },
     {
-      "id": 4,
-      "name": "Jakub",
-      "lastname": "Koczyba",
-      "query": "12",
-      "avatarUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png"
-    },
-    {
-      "id": 1,
-      "name": "Dawid",
-      "lastname": "Dyrcz",
-      "avatarUrl": "http://www.iconninja.com/files/587/741/209/face-avatar-icon.png",
-      "query": "12"
-    },
-    {
-      "id": 2,
-      "name": "Michał",
-      "lastname": "Kowalski",
-      "query": "12",
-      "avatarUrl": "https://i.pinimg.com/736x/a8/0a/cf/a80acf2af723599088e4323c056ae669--icon-creator-create-avatar.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Andrzej",
-      "lastname": "Kozioł",
-      "query": "12",
-      "avatarUrl": "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
-    },
-    {
-      "id": 4,
+      "id": "4",
       "name": "Jakub",
       "lastname": "Koczyba",
       "query": "12",
