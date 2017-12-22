@@ -5,6 +5,8 @@ import { SharedModule } from 'app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { UsersSearchEngineModule } from 'app/menu/users-search-engine/users-search-engine.module';
 
+import { NgStickyDirective } from 'ng-sticky';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -14,6 +16,7 @@ import { UsersSearchEngineModule } from 'app/menu/users-search-engine/users-sear
   ],
   declarations: [
     MenuComponent,
+    NgStickyDirective
   ],
   exports: [MenuComponent]
 })
