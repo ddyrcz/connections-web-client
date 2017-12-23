@@ -9,7 +9,57 @@
         "lastname": "Kowalski",
         "avatarUrl": "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
       },
-      "createdAt": "2017-12-09T14:58:41+01:00"
+      "createdAt": "2017-12-09T14:58:41+01:00",
+      "comments": [{
+          "content": "Pięknie! Pozdrawiam",
+          "createdAt": "2017-12-09T10:22:41+01:00",
+          "user": {
+            "id": 3,
+            "name": "Andrzej",
+            "lastname": "Dudek",
+            "avatarUrl": "http://www.iconninja.com/files/587/741/209/face-avatar-icon.png"
+          }
+        }, {
+          "content": "Piękne miejsce :)",
+          "createdAt": "2017-12-09T09:22:41+01:00",
+          "user": {
+            "id": 4,
+            "name": "Dorota",
+            "lastname": "Kowalska",
+            "avatarUrl": "https://i.pinimg.com/736x/a8/0a/cf/a80acf2af723599088e4323c056ae669--icon-creator-create-avatar.jpg"
+          }
+        },
+        {
+          "content": "Też tam byłam :D",
+          "createdAt": "2017-12-09T09:22:41+01:00",
+          "user": {
+            "id": 5,
+            "name": "Agata",
+            "lastname": "Matyl",
+            "avatarUrl": "http://game-icons.net/icons/darkzaitzev/originals/svg/ninja-head.svg"
+          }
+        },
+        {
+          "content": "Szalony Ty! :D",
+          "createdAt": "2017-12-09T09:22:41+01:00",
+          "user": {
+            "id": 5,
+            "name": "Wojtek",
+            "lastname": "Baran",
+            "avatarUrl": "http://iconbug.com/data/a3/512/b3eec5e7596cfe12ac76807b66c32555.png"
+          }
+        },
+        {
+          "content": "Kiedy powtórka? ",
+          "createdAt": "2017-12-09T09:22:41+01:00",
+          "user": {
+            "id": 5,
+            "name": "Jacek",
+            "lastname": "Majdan",
+            "avatarUrl": "https://t3.ftcdn.net/jpg/01/84/10/10/500_F_184101011_RorNgFU9K4wNMNnJFo4OYTrrUg0x7CuO.jpg"
+          }
+        }
+      ]
     },
     {
       "id": "2",

@@ -1,4 +1,5 @@
 import { User } from 'app/shared/model/user.model';
+import { Comment } from 'app/shared/model/comment.interface';
 
 export interface Post {
     id: number;
@@ -6,4 +7,5 @@ export interface Post {
     imageUrl: string;
     user: User;
     createdAt: Date;
+    comments: Comment[]
 }
