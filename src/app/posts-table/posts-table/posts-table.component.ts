@@ -3,6 +3,9 @@ import { PostsTableService } from 'app/posts-table/posts-table/services/posts-ta
 import { PostsNumberToDownloadCalculator } from 'app/posts-table/posts-table/services/posts-number-to-download-calculator.service';
 import { Post } from 'app/shared/model/post.model';
 import { OldestPostService } from 'app/shared/services/posts/oldest-post.service';
+import { MatDialog } from '@angular/material/dialog';
+import { CreatePostComponent } from 'app/posts-table/create-post/create-post.component';
+
 
 @Component({
   selector: 'app-posts-table',
@@ -18,7 +21,8 @@ export class PostsTableComponent implements OnInit {
 
   posts: Post[] = [];
 
-  constructor(private tableService: PostsTableService) { }
+  constructor(private tableService: PostsTableService,
+    private dialog: MatDialog) { }
 
   async ngOnInit() {
     await this.getPosts();
@@ -27,6 +31,10 @@ export class PostsTableComponent implements OnInit {
   private async getPosts() {
     const newPosts = await this.tableService.getPosts();
     this.posts.push(...newPosts);
+  }
+
+  showCreatePostWindow() {
+    this.dialog.open(CreatePostComponent)
   }
 
   onTableScroll() {
