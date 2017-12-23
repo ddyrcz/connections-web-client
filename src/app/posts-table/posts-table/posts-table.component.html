@@ -2,3 +2,6 @@
   [infiniteScrollThrottle]="500" (scrolled)="onTableScroll()">
   <app-post *ngFor='let post of posts' [post]='post'></app-post>
 </div>
+<button mat-fab class='btn-add-post'>
+  <i class="material-icons">add</i>
+</button>
