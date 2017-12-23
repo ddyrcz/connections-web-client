@@ -2,7 +2,7 @@
   <mat-form-field class='form' floatLabel='never'>
     <input type="text" #queryInput matInput placeholder="Szukaj znajomych" [formControl]="queryInputControl" [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let user of users" [value]="user" (click)='onUserSelected()' [routerLink]="['/users', user.id]">
+      <mat-option *ngFor="let user of users" [value]="user" (click)='onUserSelected()' [routerLink]="['/users', user._id]">
         <div fxLayoutAlign='start center' fxLayoutGap='10px'>
           <img class='user-avatar' [src]="user.avatarUrl">
           <div>{{user.name}} {{user.lastname}}</div>

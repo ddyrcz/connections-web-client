@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostsTableService } from 'app/posts-table/posts-table/services/posts-table.service';
 import { PostsNumberToDownloadCalculator } from 'app/posts-table/posts-table/services/posts-number-to-download-calculator.service';
 import { Post } from 'app/shared/model/post.model';
+import { OldestPostService } from 'app/shared/services/posts/oldest-post.service';
 
 @Component({
   selector: 'app-posts-table',
@@ -9,7 +10,8 @@ import { Post } from 'app/shared/model/post.model';
   styleUrls: ['./posts-table.component.scss'],
   providers: [
     PostsTableService,
-    PostsNumberToDownloadCalculator
+    PostsNumberToDownloadCalculator,
+    OldestPostService
   ]
 })
 export class PostsTableComponent implements OnInit {

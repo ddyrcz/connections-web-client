@@ -36,7 +36,11 @@ export class UsersSearchEngineComponent implements OnInit {
     this.queryInputControl.valueChanges
       .debounceTime(200)
       .subscribe(async (query: string) => {
-        this.users = await this.userService.getUsers(query);
+        if (query) {
+          this.users = await this.userService.getUsers(query);
+        } else {
+          this.users = []
+        }
       });
   }
 }

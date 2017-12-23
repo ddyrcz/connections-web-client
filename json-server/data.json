@@ -98,29 +98,6 @@
       "createdAt": "2017-12-08T21:33:20+01:00"
     }
   ],
-  "comments": [{
-    "id": 1,
-    "postId": 1,
-    "content": "Pięknie! Pozdrawiam",
-    "createdAt": "2017-12-09T10:22:41+01:00",
-    "user": {
-      "id": 3,
-      "name": "Andrzej",
-      "lastname": "Dudek",
-      "avatarUrl": "http://www.iconninja.com/files/587/741/209/face-avatar-icon.png"
-    }
-  }, {
-    "id": 2,
-    "postId": 1,
-    "content": "Piękne miejsce :)",
-    "createdAt": "2017-12-09T09:22:41+01:00",
-    "user": {
-      "id": 4,
-      "name": "Dorota",
-      "lastname": "Kowalska",
-      "avatarUrl": "https://i.pinimg.com/736x/a8/0a/cf/a80acf2af723599088e4323c056ae669--icon-creator-create-avatar.jpg"
-    }
-  }],
   "users": [{
       "id": "1",
       "name": "Dawid",

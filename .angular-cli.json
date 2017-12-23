@@ -24,6 +24,7 @@
     "environmentSource": "environments/environment.ts",
     "environments": {
       "dev": "environments/environment.ts",
+      "json-server": "environments/environment.json-server.ts",
       "prod": "environments/environment.prod.ts"
     }
   }],
