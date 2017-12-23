@@ -2,6 +2,6 @@
   [infiniteScrollThrottle]="500" (scrolled)="onTableScroll()">
   <app-post *ngFor='let post of posts' [post]='post'></app-post>
 </div>
-<button mat-fab class='btn-create-post' matTooltip="Dodaj post" matTooltipPosition='before' (click)='showCreatePostWindow()'>
+<button mat-fab class='btn-create-post' matTooltip="Dodaj post" (click)='showCreatePostWindow()'>
   <i class="material-icons">add</i>
 </button>
