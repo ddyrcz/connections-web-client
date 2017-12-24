@@ -1,14 +1,12 @@
-<div class="create-post-container">
-  <div fxLayout>
-    <img style='width: 60px; height: 60px; margin-top: 28px; margin-right: 15px;' class='logged-in-user-avatar' [src]="applicationData.loggedInUser.avatarUrl">
-    <mat-form-field floatLabel='never'>
-      <textarea rows="8" matInput placeholder="Co Ci chodzi po głowie?" #content></textarea>
-    </mat-form-field>
-  </div>
-  <div fxLayout='row' fxLayoutGap='10px'>
-    <button mat-button>
-      <i class="material-icons">photo</i>
-    </button>
-    <button fxFlex mat-raised-button (click)='createPost(content.value)'>Opublikuj</button>
-  </div>
-</div>
+<h1 mat-dialog-title>Dodaj post</h1>
+<mat-dialog-content>
+  <mat-form-field floatLabel='never' class='content-form'>
+    <textarea rows="5" matInput placeholder="Co Ci chodzi po głowie?" #content (keyup.enter)='createPost(content.value)'></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button>
+    <i class="material-icons">photo</i>
+  </button>
+  <button mat-raised-button fxFlex (click)='createPost(content.value)'>Opublikuj</button>
+</mat-dialog-actions>
