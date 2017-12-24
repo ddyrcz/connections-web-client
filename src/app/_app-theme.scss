@@ -1,7 +1,6 @@
 @import '~@angular/material/theming';
 @mixin app-theme($theme) {
-  $primary: map-get($theme, primary);
   body {
-    background-color: mat-color($primary, 50);
+    background-color: #f8f8f8;
   }
 }

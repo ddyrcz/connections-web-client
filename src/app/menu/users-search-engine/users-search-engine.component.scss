@@ -1,19 +1,19 @@
-.searcher-container {
-  mat-form-field {
-    width: 100%;
-    max-width: 300px;
+  .users-search-engine-container {
+    mat-form-field {
+      width: 100%;
+      max-width: 300px;
+    }
   }
-}
 
-.user-avatar {
-  width: 40px;
-  height: 40px;
-}
-
-.show-all {
-  height: 40px;
-  &:hover {
-    background: #eee;
-    cursor: pointer;
+  .user-avatar {
+    width: 40px;
+    height: 40px;
   }
-}
+
+  .show-all {
+    height: 40px;
+    &:hover {
+      background: #eee;
+      cursor: pointer;
+    }
+  }

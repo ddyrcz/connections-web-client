@@ -1,10 +1,12 @@
 @import '~@angular/material/theming';
 @import 'src/app/menu/menu/_menu-theme.scss';
+@import 'src/app/menu/users-search-engine/_users-search-engine-theme.scss';
 @import 'src/app/_app-theme.scss';
 @include mat-core();
 $app-primary: mat-palette($mat-teal);
-$app-accent: mat-palette($mat-yellow);
+$app-accent: mat-palette($mat-amber);
 $app-theme: mat-light-theme($app-primary, $app-accent);
 @include angular-material-theme($app-theme);
 @include menu-theme($app-theme);
 @include app-theme($app-theme);
+@include users-search-engine-theme($app-theme);

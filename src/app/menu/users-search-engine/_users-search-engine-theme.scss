@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+@mixin users-search-engine-theme($theme) {
+  $primary: map-get($theme, primary);
+  .users-search-engine-container {
+    input {
+      color: mat-color($primary, 50);
+    }
+    .mat-input-placeholder {
+      color: mat-color($primary, 50);
+    }
+    .mat-form-field-underline {
+      background-color: mat-color($primary, 50);
+    }
+    .mat-form-field-ripple {
+      background-color: rgba($color: mat-color($primary, 50), $alpha: 0.7);
+    }
+  }
+}
