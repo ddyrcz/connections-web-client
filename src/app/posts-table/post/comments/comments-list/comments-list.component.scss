@@ -1,7 +1,9 @@
-.load-more-text {
-  font-size: 12px;
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
+.comments-container {
+  .load-more-text {
+    font-size: 12px;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 }

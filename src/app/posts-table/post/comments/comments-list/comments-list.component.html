@@ -1,4 +1,4 @@
-<div class="comments-container" fxLayoutGap='20px'>
+<div class="comments-container">
   <app-add-comment (onCommentAdded)='onCommentAdded($event)'></app-add-comment>
   <app-comment *ngFor='let comment of comments' [comment]='comment'>
   </app-comment>

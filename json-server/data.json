@@ -109,6 +109,19 @@
         "avatarUrl": "https://d30y9cdsu7xlg0.cloudfront.net/png/103808-200.png"
       },
       "createdAt": "2017-12-08T21:33:20+01:00"
+    },
+    {
+      "id": "5",
+      "_id": "5",
+      "content": "Wesołych świąt wszystkim!",
+      "user": {
+        "id": "1",
+        "_id": "1",
+        "name": "Robert",
+        "lastname": "Lewandowski",
+        "avatarUrl": "http://polki.pl/foto/4_3_LARGE/robert-lewandowski-konczy-29-lat-zobacz-jak-sie-zmienial-i-jaka-droge-przeszedl-by-dostac-sie-na-szczyt-2385067.jpg"
+      },
+      "createdAt": "2017-12-24T12:33:20+01:00"
     }
   ],
   "users": [{
