@@ -2,7 +2,7 @@
   <div class="publisher-container" fxLayoutAlign='start center' fxLayoutGap='15px'>
     <img class='avatar' [src]="post.user.avatarUrl">
     <div class='post-information'>
-      <div class="publisher-information">{{post.user.name}} {{post.user.lastname}}
+      <div class="publisher-information" [routerLink]="['/users', post.user._id]">{{post.user.name}} {{post.user.lastname}}
       </div>
       <div class='publish-date'>{{post.createdAt | amTimeAgo}}</div>
     </div>

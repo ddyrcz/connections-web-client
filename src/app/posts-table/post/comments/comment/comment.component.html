@@ -2,7 +2,7 @@
   <img class='avatar' [src]="comment.user.avatarUrl">
   <div>
     <div fxLayout fxLayoutGap='5px'>
-      <div class='user'>{{comment.user.name}} {{comment.user.lastname}}</div>
+      <div class='user' [routerLink]="['/users', comment.user._id]">{{comment.user.name}} {{comment.user.lastname}}</div>
       <div class='content'>{{comment.content}}</div>
     </div>
     <div class='comment-date'>{{comment.createdAt | amTimeAgo}}</div>

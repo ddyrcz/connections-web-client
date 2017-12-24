@@ -8,6 +8,12 @@
       .publish-date {
         font-size: 10px;
       }
+      .publisher-information {
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
     }
     margin: 5px;
   }
