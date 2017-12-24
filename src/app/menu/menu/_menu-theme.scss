@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+@mixin menu-theme($theme) {
+  $primary: map-get($theme, primary);
+  .menu-container {
+    background-color: mat-color($primary);
+  }
+}

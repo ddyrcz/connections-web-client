@@ -37,7 +37,9 @@ export class PostsTableComponent implements OnInit {
     const dialogRef = this.dialog.open(CreatePostComponent)
 
     dialogRef.afterClosed().subscribe(post => {
-      this.posts.splice(0, 0, post)
+      if (post) {
+        this.posts.splice(0, 0, post)
+      }
     });
   }
 
