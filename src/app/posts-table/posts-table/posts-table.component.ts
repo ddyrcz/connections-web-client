@@ -34,7 +34,11 @@ export class PostsTableComponent implements OnInit {
   }
 
   showCreatePostWindow() {
-    this.dialog.open(CreatePostComponent)
+    const dialogRef = this.dialog.open(CreatePostComponent)
+
+    dialogRef.afterClosed().subscribe(post => {
+      this.posts.splice(0, 0, post)
+    });
   }
 
   onTableScroll() {

@@ -1,7 +1,7 @@
 import { User } from 'app/shared/model/user.model';
 import { Comment } from 'app/shared/model/comment.interface';
 
-export interface Post {
+export class Post {
     id: number;
     content: string;
     imageUrl: string;

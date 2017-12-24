@@ -1,11 +1,14 @@
 <div class="create-post-container">
-  <mat-form-field floatLabel='never'>
-    <textarea rows="8" matInput placeholder="Co Ci chodzi po głowie?"></textarea>
-  </mat-form-field>
-  <div fxLayout='row'>
+  <div fxLayout>
+    <img style='width: 60px; height: 60px; margin-top: 28px; margin-right: 15px;' class='logged-in-user-avatar' [src]="applicationData.loggedInUser.avatarUrl">
+    <mat-form-field floatLabel='never'>
+      <textarea rows="8" matInput placeholder="Co Ci chodzi po głowie?" #content></textarea>
+    </mat-form-field>
+  </div>
+  <div fxLayout='row' fxLayoutGap='10px'>
     <button mat-button>
       <i class="material-icons">photo</i>
     </button>
-    <button fxFlex mat-raised-button>Opublikuj</button>
+    <button fxFlex mat-raised-button (click)='createPost(content.value)'>Opublikuj</button>
   </div>
 </div>
