@@ -12,7 +12,7 @@ export class OldestPostService {
 
   updateOldestPost(posts: Post[]) {
     if (posts.length > 0) {
-      const postsList = new List<Post>(posts);
+      const postsList = new List<Post>(posts.slice());
       this.oldestPost = postsList
         .OrderBy(x => x.createdAt)
         .FirstOrDefault();
