@@ -56,6 +56,8 @@ export class CommentsListComponent implements OnInit {
     newComment.createdAt = new Date()
     newComment.user = this.applicationData.loggedInUser
 
+    this.commentService.addComment(this.post._id, newComment);
+
     this.comments.splice(0, 0, newComment);
   }
 }

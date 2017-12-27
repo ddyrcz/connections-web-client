@@ -8,4 +8,9 @@ import { Comment } from '../../shared/model/comment.interface'
 export class CommentService {
   constructor(private http: HttpClient,
     private serviceAddressProvider: ServiceAddressProvider) { }
+
+  addComment(postId: string, comment: Comment): Promise<void> {
+    return this.http.post<void>(`${this.serviceAddressProvider.serviceAddress}/posts/${postId}/comments`, comment)
+      .toPromise();
+  }
 }
