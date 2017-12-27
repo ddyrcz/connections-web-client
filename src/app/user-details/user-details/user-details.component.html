@@ -6,7 +6,7 @@
       <div class='name-lastname'>{{user.name}} {{user.lastname}}</div>
       <div *ngIf='!detailsOfLoggedUser'>
         <button *ngIf='!following' class='btn-follow' mat-raised-button (click)='follow()'>Obserwuj</button>
-        <button *ngIf='following' class='btn-follow' mat-raised-button (click)='unfollow()'>Przestań obserwoweać</button>
+        <button *ngIf='following' class='btn-follow' mat-raised-button (click)='unfollow()'>Przestań obserwować</button>
       </div>
     </div>
   </mat-card>

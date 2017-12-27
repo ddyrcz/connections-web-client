@@ -23,4 +23,9 @@ export class UserService {
     return this.http.post<void>(`${this.serviceAddressProvider.serviceAddress}/account/users/${userId}/follow`, null)
       .toPromise();
   }
+
+  unfollow(userId: string) {
+    return this.http.post<void>(`${this.serviceAddressProvider.serviceAddress}/account/users/${userId}/unfollow`, null)
+      .toPromise();
+  }
 }

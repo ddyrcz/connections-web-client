@@ -6,6 +6,7 @@ import { Post } from 'app/shared/model/post.model';
 import { UserPostsService } from 'app/user-details/user-details/services/user-posts.service';
 import { OldestPostService } from 'app/shared/services/posts/oldest-post.service';
 import { ApplicationDataService } from 'app/core/services/application-data.service';
+import { List } from 'linqts';
 
 @Component({
   selector: 'app-user-details',
@@ -60,5 +61,13 @@ export class UserDetailsComponent implements OnInit {
 
   follow() {
     this.userService.follow(this.user._id)
+    this.applicationData.loggedInUser.following.push(this.user._id)
   }
+
+  unfollow() {
+    this.userService.unfollow(this.user._id)
+    const list = new List<string>(this.applicationData.loggedInUser.following);
+    list.Remove(list.FirstOrDefault(x => x === this.user._id))
+  }
+
 }
