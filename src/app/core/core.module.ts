@@ -7,6 +7,7 @@ import { ServiceAddressProvider } from 'app/core/http/service-address-provider.s
 import { DateService } from 'app/core/date.service';
 import { ApplicationDataService } from 'app/core/services/application-data.service';
 import { UserService } from './http/user.service';
+import { FileService } from './http/file.service';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { UserService } from './http/user.service';
     ServiceAddressProvider,
     DateService,
     ApplicationDataService,
-    UserService
+    UserService,
+    FileService
   ],
   exports: [
     HttpClientModule

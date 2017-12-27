@@ -4,8 +4,13 @@
     <textarea rows="5" matInput placeholder="Co Ci chodzi po głowie?" #content (keyup.enter)='createPost(content.value)'></textarea>
   </mat-form-field>
 </mat-dialog-content>
+<div *ngIf='attachedImageUrl' fxLayoutAlign='start start' mat-button>
+  <img class='uploaded-image-preview' [src]="attachedImageUrl">
+  <button matTooltip="Usuń zdjęcie" class='btn-detach-image' style='' (click)='detachImage()' mat-button>x</button>
+</div>
 <mat-dialog-actions>
-  <button mat-button>
+  <input #fileInput accept="image/*" fxHide type="file" name="file" id="file" (change)='uploadImage()' />
+  <button mat-button (click)='fileInput.click()'>
     <i class="material-icons">photo</i>
   </button>
   <button mat-raised-button fxFlex (click)='createPost(content.value)'>Opublikuj</button>

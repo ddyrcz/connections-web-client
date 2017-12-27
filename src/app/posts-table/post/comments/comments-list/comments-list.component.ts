@@ -49,13 +49,12 @@ export class CommentsListComponent implements OnInit {
   }
 
   onCommentAdded(enteredComment: string) {
-    const newComment: Comment = {
-      content: enteredComment,
-      createdAt: new Date(),
-      postId: this.post.id,
-      user: this.applicationData.loggedInUser,
-      id: 0
-    };
+
+    const newComment: Comment = new Comment()
+
+    newComment.content = enteredComment;
+    newComment.createdAt = new Date()
+    newComment.user = this.applicationData.loggedInUser
 
     this.comments.splice(0, 0, newComment);
   }

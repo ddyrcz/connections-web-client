@@ -1,8 +1,7 @@
 import { User } from 'app/shared/model/user.model';
 
-export interface Comment {
+export class Comment {
     id: number;
-    postId: number;
     content: string;
     user: User;
     createdAt: Date;
