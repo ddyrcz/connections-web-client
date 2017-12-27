@@ -5,6 +5,7 @@ import { UserService } from 'app/core/http/user.service';
 import { Post } from 'app/shared/model/post.model';
 import { UserPostsService } from 'app/user-details/user-details/services/user-posts.service';
 import { OldestPostService } from 'app/shared/services/posts/oldest-post.service';
+import { ApplicationDataService } from 'app/core/services/application-data.service';
 
 @Component({
   selector: 'app-user-details',
@@ -21,11 +22,20 @@ export class UserDetailsComponent implements OnInit {
 
   posts: Post[] = []
 
+  get detailsOfLoggedUser(): boolean {
+    return this.applicationData.loggedInUser._id === this.user._id
+  }
+
+  get following(): boolean {
+    return this.applicationData.loggedInUser.following.includes(this.user._id)
+  }
+
   constructor(
     private route: ActivatedRoute,
     private userService: UserService,
     private userPostsService: UserPostsService,
-    private oldestPostService: OldestPostService) { }
+    private oldestPostService: OldestPostService,
+    private applicationData: ApplicationDataService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(map => {
@@ -46,5 +56,9 @@ export class UserDetailsComponent implements OnInit {
   async loadPosts() {
     const posts = await this.userPostsService.getUserPosts(this.user._id);
     this.posts.push(...posts);
+  }
+
+  follow() {
+    this.userService.follow(this.user._id)
   }
 }

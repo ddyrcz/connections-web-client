@@ -18,4 +18,9 @@ export class UserService {
     return this.http.get<User>(`${this.serviceAddressProvider.serviceAddress}/users/${id}`)
       .toPromise();
   }
+
+  follow(userId: string) {
+    return this.http.post<void>(`${this.serviceAddressProvider.serviceAddress}/account/users/${userId}/follow`, null)
+      .toPromise();
+  }
 }
