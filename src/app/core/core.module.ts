@@ -8,6 +8,7 @@ import { DateService } from 'app/core/date.service';
 import { ApplicationDataService } from 'app/core/services/application-data.service';
 import { UserService } from './http/user.service';
 import { FileService } from './http/file.service';
+import { PostService } from './http/post.service';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { FileService } from './http/file.service';
     DateService,
     ApplicationDataService,
     UserService,
-    FileService
+    FileService,
+    PostService
   ],
   exports: [
     HttpClientModule

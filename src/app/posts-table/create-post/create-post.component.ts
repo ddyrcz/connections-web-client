@@ -4,6 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { Post } from 'app/shared/model/post.model';
 import { ViewChild } from '@angular/core';
 import { FileService } from 'app/core/http/file.service';
+import { PostService } from 'app/core/http/post.service';
 
 @Component({
   selector: 'app-create-post',
@@ -18,18 +19,26 @@ export class CreatePostComponent implements OnInit {
 
   constructor(public applicationData: ApplicationDataService,
     private dialogRef: MatDialogRef<CreatePostComponent>,
-    private fileService: FileService) { }
+    private fileService: FileService,
+    private postService: PostService) { }
 
   ngOnInit() {
   }
 
-  createPost(content: string) {
-
+  private buildPost(content: string): Post {
     let post: Post = new Post();
     post.content = content;
     post.createdAt = new Date();
     post.user = this.applicationData.loggedInUser;
     post.imageUrl = this.attachedImageUrl
+
+    return post;
+  }
+
+  async createPost(content: string) {
+    let post: Post = this.buildPost(content);
+
+    post = await this.postService.publishPost(post)
 
     this.dialogRef.close(post)
   }

@@ -6,7 +6,7 @@
 </mat-dialog-content>
 <div *ngIf='attachedImageUrl' fxLayoutAlign='start start' mat-button>
   <img class='uploaded-image-preview' [src]="attachedImageUrl">
-  <button matTooltip="Usuń zdjęcie" class='btn-detach-image' style='' (click)='detachImage()' mat-button>x</button>
+  <button matTooltip="Usuń zdjęcie" class='btn-detach-image' (click)='detachImage()' mat-button>x</button>
 </div>
 <mat-dialog-actions>
   <input #fileInput accept="image/*" fxHide type="file" name="file" id="file" (change)='uploadImage()' />
