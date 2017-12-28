@@ -1,17 +1,17 @@
 <div class="login-container" fxLayoutAlign='center center'>
   <mat-card>
-    <form [formGroup]='formGroup' (ngSubmit)='login()' novalidate>
+    <form (ngSubmit)='login()'>
       <div>
         <mat-form-field>
-          <input placeholder="Podaj email" matInput formControlName='email'>
+          <input placeholder="Podaj email" matInput ([ngModel])='email'>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput type="password" placeholder="Podaj hasło" formControlName='password'>
+          <input matInput type="password" placeholder="Podaj hasło" ([ngModel])='password'>
         </mat-form-field>
       </div>
-      <button mat-raised-button type='submit'>Zaloguj</button>
+      <button routerLink='' mat-raised-button type='submit'>Zaloguj</button>
     </form>
     <h5>Nie masz konta? Stwórz je!</h5>
   </mat-card>

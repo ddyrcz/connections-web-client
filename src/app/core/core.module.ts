@@ -9,6 +9,8 @@ import { ApplicationDataService } from 'app/core/services/application-data.servi
 import { UserService } from './http/user.service';
 import { FileService } from './http/file.service';
 import { PostService } from './http/post.service';
+import { AuthService } from './http/auth.service';
+import { TokenStorage } from './services/token-storage.service';
 
 @NgModule({
   imports: [
@@ -21,7 +23,9 @@ import { PostService } from './http/post.service';
     ApplicationDataService,
     UserService,
     FileService,
-    PostService
+    PostService,
+    AuthService,
+    TokenStorage
   ],
   exports: [
     HttpClientModule
