@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'app/shared/model/user.model';
 import { AuthService } from 'app/core/http/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,8 @@ import { AuthService } from 'app/core/http/auth.service';
 })
 export class LoginComponent implements OnInit {
   constructor(
-    private auth: AuthService) {
+    private auth: AuthService,
+    private router: Router) {
   }
 
   email: string
@@ -19,6 +21,7 @@ export class LoginComponent implements OnInit {
 
   async login() {
     await this.auth.login(this.email, this.password);
+    this.router.navigateByUrl("")
     return false
   }
 }

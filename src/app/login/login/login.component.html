@@ -11,8 +11,8 @@
           <input matInput type="password" placeholder="Podaj hasło" ([ngModel])='password'>
         </mat-form-field>
       </div>
-      <button routerLink='' mat-raised-button type='submit'>Zaloguj</button>
+      <button mat-raised-button type='submit'>Zaloguj</button>
     </form>
-    <h5>Nie masz konta? Stwórz je!</h5>
+    <h5 routerLink='/register' class='register'>Nie masz konta? Stwórz je!</h5>
   </mat-card>
 </div>
