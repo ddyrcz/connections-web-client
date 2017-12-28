@@ -7,16 +7,7 @@ import { User } from 'app/shared/model/user.model';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  private user: User;
-
   constructor() { }
 
-  ngOnInit() {
-
-  }
-
-  login() {
-    console.log(this.user);
-  }
+  ngOnInit() { }
 }

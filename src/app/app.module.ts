@@ -10,6 +10,8 @@ import { MaterialModule } from 'app/shared/material/material.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from 'app/home/home.module';
 import { CoreModule } from 'app/core/core.module';
+import { LoginModule } from 'app/login/login.module';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,16 @@ import { CoreModule } from 'app/core/core.module';
     CommonModule,
     MomentModule,
     MaterialModule,
-    HomeModule,
     CoreModule,
-    RouterModule.forRoot([])
+    LoginModule,
+    RouterModule.forRoot([]),
+    HomeModule,
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(router: Router) {
+    console.log(router.config);
+  }
+}
