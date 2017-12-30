@@ -8,6 +8,7 @@ import { List } from 'linqts';
 
 import { DateService } from 'app/core/date.service';
 import { OldestPostService } from 'app/shared/services/posts/oldest-post.service';
+import { plainToClass } from 'class-transformer';
 
 @Injectable()
 export class PostsTableService {
@@ -24,6 +25,7 @@ export class PostsTableService {
 
     return this.http.get<Post[]>
       (`${this.serviceAddressProvider.serviceAddress}/account/posts?createdBefore=${oldestPostCreationDateAsString}&take=${numberOfPostToDownload}`)
+      .map(posts => plainToClass(Post, posts))
       .do(posts => {
         this.oldestPostService.updateOldestPost(posts)
       })

@@ -5,6 +5,6 @@ export class TokenStorage {
 
   constructor() { }
 
-  token: string | undefined
+  token: string | null
 
 }

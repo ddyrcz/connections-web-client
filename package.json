@@ -29,6 +29,7 @@
     "@angular/platform-server": "^5.1.2",
     "@angular/router": "^5.1.2",
     "angular2-moment": "^1.7.1",
+    "class-transformer": "^0.1.8",
     "core-js": "^2.5.3",
     "font-awesome": "^4.7.0",
     "linqts": "^1.10.0",

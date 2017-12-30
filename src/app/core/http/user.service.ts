@@ -3,6 +3,7 @@ import { User } from 'app/shared/model/user.model';
 import { HttpClient } from '@angular/common/http';
 import { ServiceAddressProvider } from 'app/core/http/service-address-provider.service';
 import { Post } from 'app/shared/model/post.model';
+import { plainToClass } from 'class-transformer';
 
 @Injectable()
 export class UserService {
@@ -11,6 +12,7 @@ export class UserService {
 
   getUsers(query: string): Promise<User[]> {
     return this.http.get<User[]>(`${this.serviceAddressProvider.serviceAddress}/users?query=${query}&createdBefore=&take=10`)
+      .map(user => plainToClass(User, user))
       .toPromise();
   }
 
