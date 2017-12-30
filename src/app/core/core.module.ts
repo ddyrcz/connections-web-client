@@ -14,6 +14,7 @@ import { TokenStorage } from './services/token-storage.service';
 import { GrowlService } from 'app/core/growl/growl.service';
 import { FailureResponseMessageResolver } from 'app/core/http/failure-response-message-resolver';
 import { HttpErrorInterceptor } from 'app/core/http/interceptor/http-error-interceptor.service';
+import { HeaderInterceptor } from 'app/core/http/interceptor/header-interceptor.service';
 
 @NgModule({
   imports: [
@@ -33,6 +34,12 @@ import { HttpErrorInterceptor } from 'app/core/http/interceptor/http-error-inter
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpErrorInterceptor,
+      multi: true,
+
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HeaderInterceptor,
       multi: true,
 
     },
