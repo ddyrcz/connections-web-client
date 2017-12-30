@@ -1,7 +1,14 @@
 @import '~@angular/material/theming';
+@import 'src/styles/colors';
 @mixin menu-theme($theme) {
   $primary: map-get($theme, primary);
   .menu-container {
     background-color: mat-color($primary);
+    .company-logo {
+      color: $background-color;
+    }
+    .logout {
+      color: $background-color;
+    }
   }
 }

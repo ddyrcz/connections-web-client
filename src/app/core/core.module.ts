@@ -11,8 +11,9 @@ import { FileService } from './http/file.service';
 import { PostService } from './http/post.service';
 import { AuthService } from './http/auth.service';
 import { TokenStorage } from './services/token-storage.service';
-import { HttpErrorInterceptor } from 'app/core/http/http-error-interceptor.service';
 import { GrowlService } from 'app/core/growl/growl.service';
+import { FailureResponseMessageResolver } from 'app/core/http/failure-response-message-resolver';
+import { HttpErrorInterceptor } from 'app/core/http/interceptor/http-error-interceptor.service';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { GrowlService } from 'app/core/growl/growl.service';
       useClass: HttpErrorInterceptor,
       multi: true,
 
-    }
+    },
+    FailureResponseMessageResolver
   ],
   exports: [
     HttpClientModule

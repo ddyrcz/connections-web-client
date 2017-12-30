@@ -15,7 +15,6 @@ import { Router } from '@angular/router';
 
 import { GrowlModule } from 'primeng/components/growl/growl';
 
-
 @NgModule({
   declarations: [
     AppComponent,

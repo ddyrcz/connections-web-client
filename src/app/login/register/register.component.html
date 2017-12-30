@@ -1,3 +1,33 @@
-<p>
-  register works!
-</p>
+<div class="register-container" fxLayoutAlign='center center'>
+  <mat-card class='register-card'>
+    <form #loginForm='ngForm' (ngSubmit)='login()'>
+      <div>
+        <mat-form-field>
+          <input placeholder="Podaj imię" matInput required name='name' [(ngModel)]='name'>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput name='lastname' required placeholder="Podaj nazwisko" [(ngModel)]='lastname'>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput name='email' required placeholder="Podaj email" [(ngModel)]='email'>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput name='password' required placeholder="Hasło" [(ngModel)]='password'>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput name='repeatedPassword' required placeholder="Powtórz hasło" [(ngModel)]='repeatedPassword'>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button [disabled]='!loginForm.form.valid' type='submit'>Stwórz konto</button>
+    </form>
+    <h5 routerLink='/login' class='login'>Masz konto? Zaloguj się!</h5>
+  </mat-card>
+</div>
