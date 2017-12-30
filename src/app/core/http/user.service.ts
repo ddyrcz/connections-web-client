@@ -28,4 +28,9 @@ export class UserService {
     return this.http.post<void>(`${this.serviceAddressProvider.serviceAddress}/account/users/${userId}/unfollow`, null)
       .toPromise();
   }
+
+  register(user: User): Promise<User> {
+    return this.http.post<User>(`${this.serviceAddressProvider.serviceAddress}/users`, user)
+      .toPromise()
+  }
 }
