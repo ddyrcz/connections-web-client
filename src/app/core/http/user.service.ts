@@ -18,6 +18,7 @@ export class UserService {
 
   getUserData(id: string): Promise<User> {
     return this.http.get<User>(`${this.serviceAddressProvider.serviceAddress}/users/${id}`)
+      .map(user => plainToClass(User, user))
       .toPromise();
   }
 

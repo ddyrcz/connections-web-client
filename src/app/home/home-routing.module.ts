@@ -7,7 +7,7 @@ import { HomeComponent } from 'app/home/home/home.component';
 
 const routes: Routes = [
     {
-        path: '', pathMatch: 'full', component: HomeComponent,
+        path: '', component: HomeComponent,
         children: [
             { path: '', pathMatch: 'full', component: PostsTableComponent },
             { path: 'users', component: UsersListComponent },
