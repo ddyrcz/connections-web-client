@@ -13,6 +13,9 @@ import { CoreModule } from 'app/core/core.module';
 import { LoginModule } from 'app/login/login.module';
 import { Router } from '@angular/router';
 
+import { GrowlModule } from 'primeng/components/growl/growl';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +29,7 @@ import { Router } from '@angular/router';
     LoginModule,
     RouterModule.forRoot([]),
     HomeModule,
+    GrowlModule
   ],
   bootstrap: [AppComponent]
 })

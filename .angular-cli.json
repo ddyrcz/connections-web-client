@@ -19,6 +19,9 @@
     "prefix": "app",
     "styles": [
       "styles/angular-material/setup.scss",
+      "../node_modules/font-awesome/css/font-awesome.min.css",
+      "../node_modules/primeng/resources/themes/omega/theme.css",
+      "../node_modules/primeng/resources/primeng.min.css",
       "styles/styles.scss"
     ],
     "scripts": [],

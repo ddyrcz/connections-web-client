@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GrowlService } from 'app/core/growl/growl.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor() { }
+  constructor(public growl: GrowlService) {
+  }
 }

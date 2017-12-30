@@ -3,12 +3,12 @@
     <form (ngSubmit)='login()'>
       <div>
         <mat-form-field>
-          <input placeholder="Podaj email" matInput ([ngModel])='email'>
+          <input placeholder="Podaj email" matInput name='email' [(ngModel)]='email'>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput type="password" placeholder="Podaj hasło" ([ngModel])='password'>
+          <input matInput type="password" name='password' placeholder="Podaj hasło" [(ngModel)]='password'>
         </mat-form-field>
       </div>
       <button mat-raised-button type='submit'>Zaloguj</button>

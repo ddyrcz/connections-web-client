@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { CommentService } from './http/comment.service';
 import { ServiceAddressProvider } from 'app/core/http/service-address-provider.service';
@@ -11,6 +11,8 @@ import { FileService } from './http/file.service';
 import { PostService } from './http/post.service';
 import { AuthService } from './http/auth.service';
 import { TokenStorage } from './services/token-storage.service';
+import { HttpErrorInterceptor } from 'app/core/http/http-error-interceptor.service';
+import { GrowlService } from 'app/core/growl/growl.service';
 
 @NgModule({
   imports: [
@@ -25,7 +27,14 @@ import { TokenStorage } from './services/token-storage.service';
     FileService,
     PostService,
     AuthService,
-    TokenStorage
+    TokenStorage,
+    GrowlService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true,
+
+    }
   ],
   exports: [
     HttpClientModule

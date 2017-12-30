@@ -30,10 +30,12 @@
     "@angular/router": "^5.1.2",
     "angular2-moment": "^1.7.1",
     "core-js": "^2.5.3",
+    "font-awesome": "^4.7.0",
     "linqts": "^1.10.0",
     "moment": "^2.20.1",
     "ng-sticky": "^0.1.5",
     "ngx-infinite-scroll": "^0.7.2",
+    "primeng": "^5.0.2",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
