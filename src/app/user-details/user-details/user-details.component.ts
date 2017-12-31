@@ -24,11 +24,17 @@ export class UserDetailsComponent implements OnInit {
   posts: Post[] = []
 
   get detailsOfLoggedUser(): boolean {
-    return this.applicationData.loggedInUser._id === this.user._id
+    if (this.applicationData.loggedInUser)
+      return this.applicationData.loggedInUser._id === this.user._id
+
+    return false
   }
 
   get following(): boolean {
-    return this.applicationData.loggedInUser.following.includes(this.user._id)
+    if (this.applicationData.loggedInUser)
+      return this.applicationData.loggedInUser.following.includes(this.user._id)
+
+    return false
   }
 
   constructor(
@@ -61,13 +67,23 @@ export class UserDetailsComponent implements OnInit {
 
   follow() {
     this.userService.follow(this.user._id)
-    this.applicationData.loggedInUser.following.push(this.user._id)
+    if (this.applicationData.loggedInUser) {
+      var loggedInUser = this.applicationData.loggedInUser
+      loggedInUser.following.push(this.user._id)
+      // update local storage
+      this.applicationData.loggedInUser = loggedInUser
+    }
   }
 
   unfollow() {
     this.userService.unfollow(this.user._id)
-    const list = new List<string>(this.applicationData.loggedInUser.following);
-    list.Remove(list.FirstOrDefault(x => x === this.user._id))
+    if (this.applicationData.loggedInUser) {
+      var loggedInUser = this.applicationData.loggedInUser
+      const list = new List<string>(loggedInUser.following);
+      list.Remove(list.FirstOrDefault(x => x === this.user._id))
+      //update local storage
+      this.applicationData.loggedInUser = loggedInUser
+    }
   }
 
 }

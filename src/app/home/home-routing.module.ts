@@ -4,10 +4,12 @@ import { PostsTableComponent } from 'app/posts-table/posts-table/posts-table.com
 import { UsersListComponent } from 'app/users-list/users-list/users-list.component';
 import { UserDetailsComponent } from 'app/user-details/user-details/user-details.component';
 import { HomeComponent } from 'app/home/home/home.component';
+import { AuthGuard } from 'app/core/auth.guard';
 
 const routes: Routes = [
     {
         path: '', component: HomeComponent,
+        canActivate: [AuthGuard],
         children: [
             { path: '', pathMatch: 'full', component: PostsTableComponent },
             { path: 'users', component: UsersListComponent },

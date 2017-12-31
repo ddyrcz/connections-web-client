@@ -15,6 +15,7 @@ import { GrowlService } from 'app/core/growl/growl.service';
 import { FailureResponseMessageResolver } from 'app/core/http/failure-response-message-resolver';
 import { HttpErrorInterceptor } from 'app/core/http/interceptor/http-error-interceptor.service';
 import { HeaderInterceptor } from 'app/core/http/interceptor/header-interceptor.service';
+import { AuthGuard } from 'app/core/auth.guard';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { HeaderInterceptor } from 'app/core/http/interceptor/header-interceptor.
     PostService,
     AuthService,
     TokenStorage,
+    AuthGuard,
     GrowlService,
     {
       provide: HTTP_INTERCEPTORS,
