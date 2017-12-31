@@ -8,7 +8,7 @@ import { ApplicationDataService } from 'app/core/services/application-data.servi
 })
 export class AddCommentComponent implements OnInit {
 
-  constructor(private applicationData: ApplicationDataService) { }
+  constructor(public applicationData: ApplicationDataService) { }
 
   @Output() onCommentAdded = new EventEmitter<string>();
 
