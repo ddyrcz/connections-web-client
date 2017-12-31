@@ -1,3 +1,6 @@
+import './rxjs-imports';
+import './moment-setup';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
