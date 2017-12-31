@@ -9,6 +9,7 @@ import { List } from 'linqts';
 import { DateService } from 'app/core/date.service';
 import { OldestPostService } from 'app/shared/services/posts/oldest-post.service';
 import { plainToClass } from 'class-transformer';
+import { Comment } from 'app/shared/model/comment.interface';
 
 @Injectable()
 export class PostsTableService {
@@ -27,8 +28,16 @@ export class PostsTableService {
       (`${this.serviceAddressProvider.serviceAddress}/account/posts?createdBefore=${oldestPostCreationDateAsString}&take=${numberOfPostToDownload}`)
       .map(posts => plainToClass(Post, posts))
       .do(posts => {
+        this.sortCommentsOfEachPost(posts);
         this.oldestPostService.updateOldestPost(posts)
       })
       .toPromise();
+  }
+
+  private sortCommentsOfEachPost(posts: Post[]) {
+    for (let post of posts) {
+      let commentsList = new List<Comment>(post.comments)
+      commentsList.OrderByDescending(x => x.createdAt)
+    }
   }
 }

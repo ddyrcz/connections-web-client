@@ -1,7 +1,7 @@
 <div fxLayout=column fxLayoutAlign='center center' fxLayoutGap='15px' infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="500"
   (scrolled)="loadPosts()">
   <mat-card class='details-container' *ngIf='user' fxLayout fxLayoutGap='20px'>
-    <img class='avatar' [src]="user.avatarUrl">
+    <img class='avatar' [src]="user.AvatarUrl">
     <div>
       <div class='name-lastname'>{{user.name}} {{user.lastname}}</div>
       <div *ngIf='!detailsOfLoggedUser'>

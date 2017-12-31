@@ -1,5 +1,5 @@
 <div class='add-comment-container' fxLayout fxLayoutGap='10px' fxLayoutAlign='start center'>
-  <img class='logged-in-user-avatar' [src]="applicationData.loggedInUser.avatarUrl">
+  <img class='logged-in-user-avatar' [src]="applicationData.loggedInUser.AvatarUrl">
   <mat-form-field class='comment-input'>
     <input #commentInput [(ngModel)]='comment' matInput placeholder="Dodaj komentarz" (keyup.enter)='comment && addComment(commentInput.value)'>
   </mat-form-field>
