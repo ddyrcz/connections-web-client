@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApplicationDataService } from 'app/core/services/application-data.service';
 
 @Component({
   selector: 'app-menu',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+
+  constructor(public applicationData: ApplicationDataService) { }
+
   ngOnInit() {
   }
 

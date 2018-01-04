@@ -16,11 +16,9 @@
       cursor: pointer;
     }
   }
-  .person-icon {
+  .logged-in-user-avatar {
     height: 40px;
     width: 40px;
-    &:hover {
-      cursor: pointer;
-    }
+    border-radius: 50%;
   }
 }

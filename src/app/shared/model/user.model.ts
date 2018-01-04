@@ -19,4 +19,8 @@ export class User {
     set AvatarUrl(url: string) {
         this.avatarUrl = url
     }
+
+    get fullName() {
+        return `${this.name} ${this.lastname}`;
+    }
 }
