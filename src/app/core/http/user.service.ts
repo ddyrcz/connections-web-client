@@ -32,6 +32,11 @@ export class UserService {
       .toPromise();
   }
 
+  updateAvatar(newAvatarUrl: string) {
+    return this.http.post<void>(`${this.serviceAddressProvider.serviceAddress}/account/avatar`, { url: newAvatarUrl })
+      .toPromise();
+  }
+
   register(user: User): Promise<User> {
     return this.http.post<User>(`${this.serviceAddressProvider.serviceAddress}/users`, user)
       .toPromise()

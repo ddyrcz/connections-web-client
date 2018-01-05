@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { User } from 'app/shared/model/user.model';
 import { UserService } from 'app/core/http/user.service';
@@ -7,6 +7,7 @@ import { UserPostsService } from 'app/user-details/user-details/services/user-po
 import { OldestPostService } from 'app/shared/services/posts/oldest-post.service';
 import { ApplicationDataService } from 'app/core/services/application-data.service';
 import { List } from 'linqts';
+import { FileService } from 'app/core/http/file.service';
 
 @Component({
   selector: 'app-user-details',
@@ -22,6 +23,8 @@ export class UserDetailsComponent implements OnInit {
   user: User;
 
   posts: Post[] = []
+
+  @ViewChild('fileInput') input: ElementRef
 
   get detailsOfLoggedUser(): boolean {
     if (this.applicationData.loggedInUser)
@@ -42,7 +45,8 @@ export class UserDetailsComponent implements OnInit {
     private userService: UserService,
     private userPostsService: UserPostsService,
     private oldestPostService: OldestPostService,
-    private applicationData: ApplicationDataService) { }
+    private applicationData: ApplicationDataService,
+    private fileService: FileService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(map => {
@@ -82,6 +86,21 @@ export class UserDetailsComponent implements OnInit {
       const list = new List<string>(loggedInUser.following);
       list.Remove(list.FirstOrDefault(x => x === this.user._id))
       //update local storage
+      this.applicationData.loggedInUser = loggedInUser
+    }
+  }
+
+  async uploadImage() {
+    let formData = new FormData();
+    formData.append('file', this.input.nativeElement.files[0])
+
+    const { fileUrl } = await this.fileService.upload(formData);
+
+    this.userService.updateAvatar(fileUrl);
+
+    var loggedInUser = this.applicationData.loggedInUser
+    if (loggedInUser) {
+      loggedInUser.AvatarUrl = this.user.AvatarUrl = fileUrl
       this.applicationData.loggedInUser = loggedInUser
     }
   }

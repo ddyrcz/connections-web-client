@@ -1,7 +1,13 @@
 <div fxLayout=column fxLayoutAlign='center center' fxLayoutGap='15px' infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="500"
   (scrolled)="loadPosts()">
   <mat-card class='details-container' *ngIf='user' fxLayout fxLayoutGap='20px'>
-    <img class='avatar' [src]="user.AvatarUrl">
+    <div fxLayout='column'>
+      <img class='avatar' [src]="user.AvatarUrl">
+      <input #fileInput accept="image/*" fxHide type="file" name="file" id="file" (change)='uploadImage()' />
+      <button [fxShow]='detailsOfLoggedUser' matTooltip='Zmień zdjęcie profilowe' mat-button (click)='fileInput.click()'>
+        <i class="material-icons">photo</i>
+      </button>
+    </div>
     <div>
       <div class='name-lastname'>{{user.name}} {{user.lastname}}</div>
       <div *ngIf='!detailsOfLoggedUser'>

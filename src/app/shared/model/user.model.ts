@@ -13,7 +13,7 @@ export class User {
         if (this.avatarUrl) {
             return this.avatarUrl
         }
-        return "https://image.freepik.com/free-icon/emoticon-square-smiling-face-with-closed-eyes_318-58597.jpg";
+        return "https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png";
     }
 
     set AvatarUrl(url: string) {
