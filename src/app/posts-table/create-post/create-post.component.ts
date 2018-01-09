@@ -29,8 +29,10 @@ export class CreatePostComponent implements OnInit {
     let post: Post = new Post();
     post.content = content;
     post.createdAt = new Date();
-    post.user = this.applicationData.loggedInUser;
     post.imageUrl = this.attachedImageUrl
+    if (this.applicationData.loggedInUser) {
+      post.user = this.applicationData.loggedInUser;
+    }
 
     return post;
   }

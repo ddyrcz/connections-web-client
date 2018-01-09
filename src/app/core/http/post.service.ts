@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Post } from 'app/shared/model/post.model';
 import { HttpClient } from '@angular/common/http';
 import { ServiceAddressProvider } from 'app/core/http/service-address-provider.service';
+import { plainToClass } from 'class-transformer';
 
 @Injectable()
 export class PostService {
@@ -11,6 +12,7 @@ export class PostService {
 
   publishPost(post: Post): Promise<Post> {
     return this.http.post<Post>(`${this.serviceAddressProvider.serviceAddress}/account/posts`, post)
+      .map(post => plainToClass(Post, post))
       .toPromise()
   }
 
