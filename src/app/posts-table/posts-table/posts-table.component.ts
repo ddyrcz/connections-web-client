@@ -46,4 +46,8 @@ export class PostsTableComponent implements OnInit {
   onTableScroll() {
     this.getPosts();
   }
+
+  noPosts() {
+    return this.posts.length == 0
+  }
 }

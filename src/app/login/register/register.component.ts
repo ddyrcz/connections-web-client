@@ -3,6 +3,7 @@ import { UsersListRoutingModule } from 'app/users-list/users-list-routing.module
 import { UserService } from 'app/core/http/user.service';
 import { User } from 'app/shared/model/user.model';
 import { Router } from '@angular/router';
+import { GrowlService } from 'app/core/growl/growl.service';
 
 @Component({
   selector: 'app-register',
@@ -29,7 +30,8 @@ export class RegisterComponent implements OnInit {
   repeatedPassword: string
 
   constructor(private usersService: UserService,
-    private router: Router) { }
+    private router: Router,
+    private growl: GrowlService) { }
 
   ngOnInit() {
   }
@@ -38,7 +40,9 @@ export class RegisterComponent implements OnInit {
     const user = this.prepareUser();
     await this.usersService.register(user)
 
-    this.router.navigateByUrl('')
+    this.growl.showSuccess('Konto utworzone')
+
+    this.router.navigateByUrl('login')
   }
 
   passwordMismatch() {

@@ -9,3 +9,11 @@
   top: calc(100vh - 55px - 30px);
   left: calc(100vw - 55px - 40px);
 }
+
+.no-posts-image {
+  width: 260px;
+  height: 260px;
+  position: fixed;
+  top: calc(50vh - 100px);
+  left: calc(50vw - 130px);
+}
