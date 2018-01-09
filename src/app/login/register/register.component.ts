@@ -40,4 +40,8 @@ export class RegisterComponent implements OnInit {
 
     this.router.navigateByUrl('')
   }
+
+  passwordMismatch() {
+    return this.password != this.repeatedPassword
+  }
 }

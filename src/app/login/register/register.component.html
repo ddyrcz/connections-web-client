@@ -22,15 +22,15 @@
       </div>
       <div>
         <mat-form-field>
-          <input matInput name='password' required placeholder="Hasło" [(ngModel)]='password'>
+          <input matInput name='password' type='password' required placeholder="Hasło" [(ngModel)]='password'>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field>
-          <input matInput name='repeatedPassword' required placeholder="Powtórz hasło" [(ngModel)]='repeatedPassword'>
+          <input matInput name='repeatedPassword' type='password' required placeholder="Powtórz hasło" [(ngModel)]='repeatedPassword'>
         </mat-form-field>
       </div>
-      <button mat-raised-button [disabled]='!loginForm.form.valid' type='submit'>Stwórz konto</button>
+      <button mat-raised-button [disabled]='!loginForm.form.valid || passwordMismatch()' type='submit'>Stwórz konto</button>
     </form>
     <h5 routerLink='/login' class='login-register-switch'>Masz konto? Zaloguj się!</h5>
   </mat-card>
