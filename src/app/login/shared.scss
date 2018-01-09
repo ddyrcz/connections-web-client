@@ -1,0 +1,24 @@
+.container {
+  background-image: url("../../../assets/login-background.jpg");
+  width: 100%;
+  height: 100%;
+  .card {
+    background-color: rgba(#f1f1f1, 0.8);
+    .company-logo {
+      font-size: 50px;
+    }
+    .product-name {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 24px;
+    }
+    mat-form-field {
+      width: 100%;
+    }
+    .login-register-switch {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

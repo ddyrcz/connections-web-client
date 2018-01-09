@@ -1,5 +1,9 @@
-<div class="login-container" fxLayoutAlign='center center'>
-  <mat-card>
+<div class="container" fxLayoutAlign='center center'>
+  <mat-card class='card'>
+    <div fxLayoutAlign='center center' fxFlexGap='15px'>
+      <i class="material-icons company-logo" (click)='logoClicked()' routerLink=''>person</i>
+      <div class='product-name'>CONNECTIONS</div>
+    </div>
     <form #loginForm='ngForm' (ngSubmit)='login()'>
       <div>
         <mat-form-field>
@@ -13,6 +17,6 @@
       </div>
       <button mat-raised-button [disabled]='!loginForm.form.valid' type='submit'>Zaloguj</button>
     </form>
-    <h5 routerLink='/register' class='register'>Nie masz konta? Stwórz je!</h5>
+    <h5 routerLink='/register' class='login-register-switch'>Nie masz konta? Stwórz je!</h5>
   </mat-card>
 </div>
