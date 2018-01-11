@@ -6,7 +6,6 @@ import { OldestPostService } from 'app/shared/services/posts/oldest-post.service
 import { MatDialog } from '@angular/material/dialog';
 import { CreatePostComponent } from 'app/posts-table/create-post/create-post.component';
 
-
 @Component({
   selector: 'app-posts-table',
   templateUrl: './posts-table.component.html',

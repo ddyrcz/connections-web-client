@@ -4,6 +4,8 @@ import { ServiceAddressProvider } from 'app/core/http/service-address-provider.s
 import { HttpClient } from '@angular/common/http';
 import { OldestPostService } from 'app/shared/services/posts/oldest-post.service';
 import { plainToClass } from 'class-transformer';
+import { List } from 'linqts';
+import { Comment } from '../../../shared/model/comment.interface'
 
 @Injectable()
 export class UserPostsService {
@@ -17,9 +19,17 @@ export class UserPostsService {
     return this.http.get<Post[]>(`${this.serviceAddressProvider.serviceAddress}/users/${id}/posts?createdBefore=${oldestPostCreationDateAsString}&take=10`)
       .map(posts => plainToClass(Post, posts))
       .do(posts => {
+        this.sortCommentsOfEachPost(posts);
         this.oldestPostService.updateOldestPost(posts)
       })
       .toPromise();
+  }
+
+  private sortCommentsOfEachPost(posts: Post[]) {
+    for (let post of posts) {
+      let commentsList = new List<Comment>(post.comments)
+      commentsList.OrderByDescending(x => x.createdAt)
+    }
   }
 
 }

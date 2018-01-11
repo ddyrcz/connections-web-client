@@ -103,6 +103,19 @@ export class UserDetailsComponent implements OnInit {
       loggedInUser.AvatarUrl = this.user.AvatarUrl = fileUrl
       this.applicationData.loggedInUser = loggedInUser
     }
+
+    this.updateUserAvatarInEachPost(fileUrl);
   }
 
+  updateUserAvatarInEachPost(newAvatarUrl: string) {
+    for (const post of this.posts) {
+      post.user.AvatarUrl = newAvatarUrl;
+
+      for (const comment of post.comments) {
+        if (comment.user._id == this.user._id) {
+          comment.user.AvatarUrl = newAvatarUrl;
+        }
+      }
+    }
+  }
 }
