@@ -12,7 +12,7 @@
     <mat-menu #menu="matMenu">
       <button mat-menu-item [routerLink]="['/users', applicationData.loggedInUser._id]" fxLayoutAlign='start center' fxLayoutGap='5px'>
         <i class="material-icons">person</i> {{applicationData.loggedInUser.fullName}}</button>
-      <button mat-menu-item fxLayoutAlign='start center' fxLayoutGap='7px' routerLink='/login'>
+      <button mat-menu-item fxLayoutAlign='start center' fxLayoutGap='7px' (click)='auth.logout()'>
         <i class="material-icons logout">exit_to_app</i> Wyloguj
       </button>
     </mat-menu>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApplicationDataService } from 'app/core/services/application-data.service';
+import { AuthService } from 'app/core/http/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +9,8 @@ import { ApplicationDataService } from 'app/core/services/application-data.servi
 })
 export class MenuComponent implements OnInit {
 
-  constructor(public applicationData: ApplicationDataService) { }
+  constructor(public applicationData: ApplicationDataService,
+    public auth: AuthService) { }
 
   ngOnInit() {
   }

@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   serviceConnection: {
-    serverAddress: "localhost",
-    port: 3000
+    serverAddress: "188.116.7.217",
+    port: 3100
   }
 };
